@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    margin: 0;
+}
+.navbar{
+    margin-bottom:0 !important;
+    font-family: 'Lato';
+    font-weight: bold;
+    background-color: #04A2E1;;
+}
+.navbar-default .navbar-nav>li>a{
+    color: white;
+}
+.navbar-header>a>img{
+    height: 180px;
+    width: 180px;
+    margin-top: -60px;
+    margin-bottom: -20px;
+}
+.navbar-header button{
+    border: none;
+}
+.navbar-collapse{
+    border: none;
+}
+.navbar-collapse ul{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+#pageContent{
+    margin-top: 50px;
+}
+#home:hover, #pricing:hover, #services:hover{
+    border-bottom: 2px solid #33D65B;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: white;
+}
+#priceListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.priceListItemContainer:hover{
+    color: green;
+    padding: 3px 5px;
+    background-color: white;
+    transform: scale(1.1);
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 0.2px lightgray;
+}
+.priceListItemsContainer{
+    border: 1px solid lightgray;
+    /*border-radius: 5px;
+    box-shadow: 1.5px 1.5px 0.5px lightgray; */
+    margin: 10px 0;
+    padding: 0 10px 15px 10px;
+    text-align: center;
+}
+.priceListItemsContainer>img{
+    height: 200px;
+    width: 100%;
+    padding-top: 6px;
+}
+.priceListItemContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-family: 'Lato';
+    padding: 2px 0;
+    border-bottom: 1px solid lightgray;
+}
+.priceListItemContentRight>img{
+    margin-right: 8px;
+}
+.priceListItemContentRight{
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+}
+.sectionsHeading{
+    font-size: 1.5em;
+    font-family: 'Lato','Open Sans';
+  }
+#subFooter{
+    background-color: #04A2E1;
+    padding: 20px 0 0;
+    color: white;
+    margin-top: 100px;
+}
+#mainFooter{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+  }

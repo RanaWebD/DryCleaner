@@ -1,0 +1,287 @@
+window.scroll{
+  top: 2500; 
+  left: 0;
+  scroll-behavior: smooth; 
+}
+body, html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.row{
+  margin: 0;
+}
+p{
+  font-family: 'Lato', serif;
+}
+.container hr{
+  border: 1px solid #04A2E1;
+  width: 15%;
+}
+/* ===============Common CSS ===================*/
+.sectionsHeading{
+  font-size: 2em;
+  font-family: 'Lato','Open Sans';
+}
+.sectionsSubHeading{
+  font-size: 1.3em;
+  font-family: 'Fertigo';
+  color: lightslategray
+}
+/* ============================================== */
+.navbar{
+  margin-bottom:0 !important;
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+  font-family: 'Lato';
+  font-weight: bold;
+  z-index: 2;
+}
+.navbar-collapse{
+  text-align: center;
+  border: none;
+}
+.navbar-default .navbar-nav>li>a{
+  color: white;
+  background-color: #04A2E1
+}
+.navbar-default .navbar-nav>li>a:hover{
+  background-color: #04A2E1;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: white;
+}
+.navbar-header>a>img{
+  height: 150px;
+  width:150px;
+  margin-top: -40px;
+  margin-bottom: -20px;
+}
+@media only screen and (max-device-width: 1024px) {
+  .mainSection {
+      background-attachment: scroll;
+  }
+}
+#mainSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding-top: 160px;
+  scroll-behavior: smooth;
+  color: white;
+}
+#mainSection>h2{
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Lato', 'Open Sans';
+}
+.typed{
+  font-size: 1.5em;
+  color: white;
+  background-color: gray;
+}
+#phoneNum{
+  font-size: 1.5em 
+}
+/* BookNow button animation */
+#bookNowBtn{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Lato';
+  padding: 5px 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px #2389da;
+  border-radius: 20px;
+  background-color:#1ca3ec
+}
+#bookNowBtn:active{
+  box-shadow: none;
+  top: 4px;  
+}
+
+#mainBImage{
+  height: 100%;
+  background-image: url("http://www.lg.com/global/business/images/WM/features/CL_CoinLaundry_Hero_1461557852919.jpg");
+  /* background-image: url("https://images.unsplash.com/photo-1494281258937-45f28753affd?auto=format&fit=crop&w=750&q=80"); */
+  /* background-image: url("http://www.lg.com/global/business/images/WM/features/CL_CoinLaundry_Hero_1461557852919.jpg"); */
+  /* background-image: url("https://images.unsplash.com/photo-1489345745021-740d36bbda21?auto=format&fit=crop&w=751&q=80"); */
+  /* background-image: url("https://images.pexels.com/photos/287229/pexels-photo-287229.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"); */
+}
+#BImage1{
+  height: 50%;
+  background-image: url("imgs/Iron.jpeg");
+}
+#BImage2{
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1477248742637-8e90b0dcfb4b?auto=format&fit=crop&w=750&q=80");
+}
+#BImage3{
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1503327151497-be3b97ef0d42?auto=format&fit=crop&w=750&q=80");
+}
+#BImage4{
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1451933335233-c41672c8f378?auto=format&fit=crop&w=750&q=80");
+}
+.BImage{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+#howItWorksHeadingContainer, #areasHeadingContainer, #reviewHeadingContainer, #whyUsHeadingContainer{
+  text-align: center;
+  margin: 50px 0
+}
+#howItWorksHeadingContainer>p:nth-child(1),#areasHeadingContainer>p:nth-child(1),
+#reviewHeadingContainer>p:nth-child(1), #whyUsHeadingContainer>p:nth-child(1){
+  font-size: 2.5em
+}
+#howItWorksContentContainer, #areasContentContainer, #reviewContentContainer {
+  text-align: center;
+  margin: 20px 0;
+  padding: 30px 0;
+}
+#howItWorks{
+  padding: 50px 0 50px 0;
+  color: black !important;
+  scroll-behavior: smooth;
+}
+.howItWorksImg{
+  height: 100px;
+  width:100px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0.5px lightgray;
+  /* background-image: url("vactor-icons/delivery-man.png"); */
+  background-repeat: no-repeat;
+  background-size: 7.2em;
+}
+#playStoreIcon{
+  background-image: url("vactor-icons/playstore.png");
+}
+#meetUpBoyIcon{
+  background-image: url("vactor-icons/pickUp-man.png");
+}
+#delBoyIcon{
+  background-image: url("vactor-icons/delivery-man.png");
+}
+.areasImgContainer, .howItWorksImgContainer{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.areasImg{
+  height: 100px;
+  width: 100px;
+  border: 0.5px solid lightgray;
+  border-radius: 50%;
+  background-size:cover;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fc/India-Gate-3.jpg")
+}
+.whyUsImgContainer{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.whyUsContentContainer>div:nth-child(2)>p:nth-child(1){
+  text-align: center;
+}
+.whyUsContentContainer{
+  margin: 30px 0;
+  text-align: center;
+}
+.whyUsImg{
+  height: 70px;
+  width:70px;
+}
+#ecoFrImg{
+  background-image: url("vactor-icons/eco-friendly.png");
+  background-repeat: no-repeat;
+}
+#convImg{
+  background-image: url("vactor-icons/convenience-store.png");
+  background-repeat: no-repeat;
+}
+#qualityImg{
+  background-image: url("vactor-icons/recommended.png");
+  background-repeat: no-repeat;  
+}
+#pakImg{
+  background-image: url("vactor-icons/shopping-bag.png");
+  background-repeat: no-repeat;  
+}
+#communityImg{
+  background-image: url("vactor-icons/meeting.png");
+  background-repeat: no-repeat;  
+}
+#affordableImg{
+  background-image: url("vactor-icons/rupee.png");
+  background-repeat: no-repeat;  
+}
+.servicesImg{
+  height: 50px;
+  width:50px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+#subFooter{
+  padding:100px 0 50px 0;
+  color: white;
+  background-color: #04A2E1;
+}
+#mainFooter{
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
