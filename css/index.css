@@ -120,7 +120,7 @@ p{
 }
 #BImage1{
   height: 50%;
-  background-image: url("imgs/Iron.jpeg");
+  background-image: url("../imgs/Iron.jpeg");
 }
 #BImage2{
   height: 40%;
@@ -168,13 +168,13 @@ p{
   background-size: 7.2em;
 }
 #playStoreIcon{
-  background-image: url("vactor-icons/playstore.png");
+  background-image: url("../vactor-icons/playstore.png");
 }
 #meetUpBoyIcon{
-  background-image: url("vactor-icons/pickUp-man.png");
+  background-image: url("../vactor-icons/pickUp-man.png");
 }
 #delBoyIcon{
-  background-image: url("vactor-icons/delivery-man.png");
+  background-image: url("../vactor-icons/delivery-man.png");
 }
 .areasImgContainer, .howItWorksImgContainer{
   display: flex;
@@ -206,27 +206,27 @@ p{
   width:70px;
 }
 #ecoFrImg{
-  background-image: url("vactor-icons/eco-friendly.png");
+  background-image: url("../vactor-icons/eco-friendly.png");
   background-repeat: no-repeat;
 }
 #convImg{
-  background-image: url("vactor-icons/convenience-store.png");
+  background-image: url("../vactor-icons/convenience-store.png");
   background-repeat: no-repeat;
 }
 #qualityImg{
-  background-image: url("vactor-icons/recommended.png");
+  background-image: url("../vactor-icons/recommended.png");
   background-repeat: no-repeat;  
 }
 #pakImg{
-  background-image: url("vactor-icons/shopping-bag.png");
+  background-image: url("../vactor-icons/shopping-bag.png");
   background-repeat: no-repeat;  
 }
 #communityImg{
-  background-image: url("vactor-icons/meeting.png");
+  background-image: url("../vactor-icons/meeting.png");
   background-repeat: no-repeat;  
 }
 #affordableImg{
-  background-image: url("vactor-icons/rupee.png");
+  background-image: url("../vactor-icons/rupee.png");
   background-repeat: no-repeat;  
 }
 .servicesImg{
