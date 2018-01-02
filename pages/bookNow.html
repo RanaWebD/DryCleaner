@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bookNow.css">
+    <link href="../Datedropper3/datedropper.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -33,7 +34,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../index.html" id="howItWorks">Home</a>
+                        <a href="../index.html" id="home">Home</a>
                     </li>
                     <li>
                         <a href="prices.html" id="pricing">Pricing</a>
@@ -53,35 +54,65 @@
     <div id="container">
         <div>
             <h2>Book Now</h2>
-            <div id="nameSection">
-                <div id="firstNameContainer">
-                    <p>First Name</p>
-                    <input type="text" placeholder="First Name" class="form-control">
+            <section id="nameSection">
+                <div class="form-group">
+                    <label for="firstName" class="sr-only">First Name</label>
+                    <input type="text" id="firstName" placeholder="First Name" class="form-control">
                 </div>
-                <div id="secondNameContainer">
-                    <p>Second Name</p>
-                    <input type="text" placeholder="Last Name" class="form-control">
+                <div class="form-group" id="secondNameContainer">
+                    <label for="secondName" class="sr-only">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last Name" class="form-control">
                 </div>
-            </div>
-            <div id="numSection">
-                <p>Number</p>
-                <input type="text" placeholder="Phone Number" class="form-control">
-            </div>
-            <div id="addSection">
-                <p>Address</p>
-                <input type="text" placeholder="Address Line 1" class="form-control">
-                <input type="text" placeholder="address Line 2" class="form-control">
-                <input type="text" placeholder="address Line 3" class="form-control">
-            </div>
-            <button class="btn btn-primary form-control">Submit</button>
+            </section>
+            <section class="form-group" id="numSection">
+                <label for="number" class="sr-only">Number</label>
+                <input type="text" id="pNum" placeholder="Phone Number" class="form-control">
+            </section>
+            <section class="form-group">
+                <p>Select Services</p>
+                <label class="checkbox-inline">
+                    <input type="checkbox"> Laundry
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox"> Dry Clean
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox"> Ironing
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox"> Starch
+                </label>
+            </section>
+            <section id="timeSection">
+                <div class="form-group">
+                    <p>Pickup Time</p>
+                    <input type="text" class="datePicker" data-jump="4" data-large-mode="true" data-lang="it" />
+                </div>
+                <div class="form-group">
+                    <p>Delivery Time</p>
+                    <input type="text" class="datePicker" data-jump="4" data-large-mode="true" data-lang="it" />
+                </div>
+            </section>
+            <section class="form-group " id="addSection">
+                <label for="add" class="sr-only">Address</label>
+                <input type="text" placeholder="Address Line 1" class="form-control" id="addL1">
+                <input type="text" placeholder="address Line 2" class="form-control" id="addL2">
+                <input type="text" placeholder="address Line 3" class="form-control" id="addL3">
+            </section>
+            <button class="btn btn-primary form-control" onclick="myFunction()">BOOK NOW</button>
         </div>
     </div>
 
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../Datedropper3/datedropper.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-
+    <script src="../js/bookNow.js"></script>
+    <script>
+        $('.datePicker').dateDropper();
+    </script>
 </body>
 
 </html>

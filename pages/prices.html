@@ -58,23 +58,59 @@
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/shirt.png" alt="">
-                            <p>Shirt</p>
+                            <p class="title">Shirt</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p class="price">Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'SHIRT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="shirtQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'SHIRT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/oxford-wave-suit-pants.png" alt="">
-                            <p>Trouser</p>
+                            <p class="title">Trouser</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p class="price">Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'TROUSER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="trouserQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'TROUSER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/T-shirt.png" alt="">
                             <p>T-Shirt</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'T-SHIRT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="tShirtQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'T-SHIRT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
@@ -82,7 +118,19 @@
                                 alt="Kurta" height="32" width="32">
                             <p>Kurta</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'KURTA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="kurtaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'KURTA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
@@ -90,28 +138,79 @@
                                 alt="Kurta" height="32" width="32">
                             <p>Kurta Fancy</p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'KURTA-FANCY')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="kurtaFancyQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'KURTA-FANCY')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/jersey-blazer.png" alt="">
                             <p>Coat/Blazer</p>
                         </div>
-                        <p>Rs. 150</p>
+
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 150</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(150, 'COAT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="coatQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(150, 'COAT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/long-pants.png" alt="">
                             <p>Pyjama</p>
                         </div>
-                        <p>Rs. 50</p>
+
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'PYJAMA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="pyjamaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'PYJAMA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/short.png" alt="">
                             <p>Shorts</p>
                         </div>
-                        <p>Rs. 50</p>
+
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'SHORTS')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="shortsQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'SHORTS')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="priceListItemContainer">
@@ -119,117 +218,322 @@
                             <img src="../vactor-icons/sweater.png" alt="">
                             <p>Sweater</p>
                         </div>
-                        <p>Rs. 100</p>
+
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'SWEATER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="sweaterQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'SWEATER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/leather-biker-jacket.png" alt="">
                             <p>Leather Jacket</p>
                         </div>
-                        <p>Rs. 250</p>
+
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 250</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(250, 'LEATHER-JACKET')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="leatherJacketQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(250, 'LEATHER-JACKET')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/leather-jacket.png" alt="">
                             <p>Rexine Jacket</p>
                         </div>
-                        <p>Rs. 200</p>
+
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 200</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(200, 'REXINE-JACKET')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="rexineJacketQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(200, 'REXINE-JACKET')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/halfsweater.png" alt="">
                             <p>Half Sweater</p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'HALF-SWEATER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="halfSweaterQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'HALF-SWEATER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/kurta-pyjama.png" alt="">
                             <p>Kurta Pyjama</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'KURTA-PYJAMA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="kurtaPyjamaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'KURTA-PYJAMA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/suit.png" alt="">
                             <p>Coat Pant / 3pec</p>
                         </div>
-                        <p>Rs. 200</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 200</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(200, 'COAT-PANT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="coatPantQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(200, 'COAT-PANT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/man.png" alt="">
-                            <p>Sherwani(Non-Bridal)</p>
+                            <p>Sherwani
+                                <br> (Non-Bridal)
+                            </p>
                         </div>
-                        <p>Rs. 250</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 250</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(250, 'SHERWANI-NON-BRIDAL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="sherwaniNonBridalQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(250, 'SHERWANI-NON-BRIDAL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/man.png" alt="">
-                            <p>Sherwani(Bridal)</p>
+                            <p>Sherwani
+                                <br>(Bridal)
+                            </p>
                         </div>
-                        <p>Rs. 450</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 450</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(450, 'SHERWANI-BRIDAL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="sherwaniBridalQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(450, 'SHERWANI-BRIDAL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-6 col-md-3 priceListItemsContainer">
-                    <h3>WOMEN</h3>
+                    <h3>WOMAN</h3>
                     <img src="https://images.unsplash.com/photo-1498387727476-b30055b2ef21?auto=format&fit=crop&w=750&q=80" alt="">
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-stressed.png" alt="">
                             <p>Kurta</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'LADIES-KURTA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="ladiesKurtaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'LADIES-KURTA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-stressed.png" alt="">
                             <p>Kurta(Heavy)</p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'LADIES-KURTA-HEAVY')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="ladiesKurtaHeavyQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'LADIES-KURTA-HEAVY')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/polo-shirt-for-women.png" alt="">
                             <p>Top</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'TOP')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="topQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'TOP')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/jersey-wrap-dress.png" alt="">
                             <p>Saree</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'SAREE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="sareeQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'SAREE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-stressed.png">
                             <p>Saree Silk</p>
                         </div>
-                        <p>Rs. 150</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 150</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(150, 'SAREE-SILK')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="sareeSilkQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(150, 'SAREE-SILK')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-stressed.png">
                             <p>Saree(Heavy)</p>
                         </div>
-                        <p>Rs. 150</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 150</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(150, 'SAREE-HEAVY')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="sareeHeavyQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(150, 'SAREE-HEAVY')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-stressed.png">
                             <p>Lehenga</p>
                         </div>
-                        <p>Rs. 250</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 250</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(250, 'LEHENGA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="lehengaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(250, 'LEHENGA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-stressed.png">
                             <p>Lehenga (Bridal)</p>
                         </div>
-                        <p>Rs. 450</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 450</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(450, 'LEHENGA-BRIDAL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="lehengaBridalQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(450, 'LEHENGA-BRIDAL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="priceListItemContainer">
@@ -237,42 +541,116 @@
                             <img src="../vactor-icons/women-stressed.png">
                             <p>Dupatta</p>
                         </div>
-                        <p>Rs. 60</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 60</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(60, 'DUPATTA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="dupattaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(60, 'DUPATTA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/blouse.png">
                             <p>Blouse</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'BLOUSE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="blouseQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'BLOUSE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/tulle-skirt.png">
                             <p>Skirt</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'SKIRT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="skirtQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'SKIRT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-suit.png">
                             <p>Ladies Suit</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'LADIES-SUIT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="ladiesSuitQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'LADIES-SUIT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/coat.png">
                             <p>Coat/Blazer</p>
                         </div>
-                        <p>Rs. 150</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 150</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(150, 'LADIES-COAT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="ladiesCoatQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(150, 'LADIES-COAT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/stole.jpg" width="32" height="32">
-                            <p>Ladies Suit</p>
+                            <p>Stole</p>
                         </div>
-                        <p>Rs. 60</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 60</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(60, 'STOLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="stoleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(60, 'STOLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 priceListItemsContainer">
@@ -281,37 +659,103 @@
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/curtains.png">
-                            <p>Curtain(Small) upto 4ft</p>
+                            <p>Curtain(Small)
+                                <br> upto 4ft
+                            </p>
                         </div>
-                        <p>Rs. 60</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 60</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(60, 'CURTAIN-SMALL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="curtainSmallQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(60, 'CURTAIN-SMALL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/curtains-med.png">
-                            <p>Curtain(Medium) upto 6ft</p>
+                            <p>Curtain(Medium)
+                                <br> upto 6ft
+                            </p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'CURTAIN-MEDIUM')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="curtainMediumQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'CURTAIN-MEDIUM')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/curtains-big.png">
-                            <p>Curtain(Large) upto 6ft</p>
+                            <p>Curtain(Large)
+                                <br> upto 6ft
+                            </p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'CURTAIN-LARGE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="curtainLargeQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'CURTAIN-LARGE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/pillow.png">
                             <p>Pillow Cover</p>
                         </div>
-                        <p>Rs. 40</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 40</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(40, 'PILLOW-COVER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="pillowCoverQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(40, 'PILLOW-COVER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/towel-S.png">
                             <p>Face Towel</p>
                         </div>
-                        <p>Rs. 50</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 50</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(50, 'FACE-TOWEL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="faceTowelQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(50, 'FACE-TOWEL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="priceListItemContainer">
@@ -319,35 +763,99 @@
                             <img src="../vactor-icons/towel-L.png">
                             <p>Large Towel</p>
                         </div>
-                        <p>Rs. 60</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 60</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(60, 'LARGE-TOWEL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="largeTowelQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(60, 'LARGE-TOWEL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/bedsheet.png">
-                            <p>Bedsheet/Cover (Single)</p>
+                            <p>Bedsheet/Cover
+                                <br> (Single)
+                            </p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'BEDSHEET-COVER-SINGLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="bedsheetCoverSingleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'BEDSHEET-COVER-SINGLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/bedsheet.png">
-                            <p>Bedsheet/Cover (Double)</p>
+                            <p>Bedsheet/Cover
+                                <br>(Double)
+                            </p>
                         </div>
-                        <p>Rs. 120</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 120</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(120, 'BEDSHEET-COVER-DOUBLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="bedsheetCoverDoubleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(120, 'BEDSHEET-COVER-DOUBLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/table-cloth.png">
                             <p>Table Cover</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'TABLE-COVER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="tableCoverQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'TABLE-COVER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/carpet.png">
                             <p>Carpet (Per Sqft)</p>
                         </div>
-                        <p>Rs. 20</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 20</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(20, 'CARPET')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="carpetQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(20, 'CARPET')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -362,63 +870,171 @@
                             <img src="../vactor-icons/jacket.png">
                             <p>Jacket</p>
                         </div>
-                        <p>Rs. 120</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 120</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(120, 'JACKET')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="jacketQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(120, 'JACKET')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/half-jacket.png">
                             <p>Half Jacket</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'HALF-JACKET')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="halfJacketQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'HALF-JACKET')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/sweater.png">
                             <p>Sweater</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'WOOLEN-SWEATER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="woolenSweaterQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'WOOLEN-SWEATER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/blanket-single.png">
                             <p>Blanket(Single)</p>
                         </div>
-                        <p>Rs. 200</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 200</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(200, 'BLANKET-SINGLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="blanketSingleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(200, 'BLANKET-SINGLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/blanket-double.png">
                             <p>Blanket(Double)</p>
                         </div>
-                        <p>Rs. 250</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 250</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(250, 'BLANKET-DOUBLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="blanketDoubleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(250, 'BLANKET-DOUBLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/bed-quilt-single.png">
                             <p>Quilt(Single)</p>
                         </div>
-                        <p>Rs. 200</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 200</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(200, 'QUILT-SINGLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="quiltSingleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(200, 'QUILT-SINGLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/bed-quilt-double.png">
                             <p>Quilt(Double)</p>
                         </div>
-                        <p>Rs. 300</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 300</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(300, 'QUILT-DOUBLE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="quiltDoubleQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(300, 'QUILT-DOUBLE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/wool-scarf.png">
                             <p>Muffler</p>
                         </div>
-                        <p>Rs. 60</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 60</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(60, 'MUFFLER')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="mufflerQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(60, 'MUFFLER')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/letter-w.png">
                             <p>Shawl</p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'SHAWL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="shawlQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'SHAWL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 priceListItemsContainer">
@@ -429,21 +1045,57 @@
                             <img src="../vactor-icons//kurta-pyjama.png" alt="">
                             <p>Kurta Pyjama</p>
                         </div>
-                        <p>Rs. 40</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 40</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(40, 'CHARAKH-KURTA-PYJAMA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="charakhKurtaPyjamaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(40, 'CHARAKH-KURTA-PYJAMA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/women-suit.png" alt="">
                             <p>Ladies Suit</p>
                         </div>
-                        <p>Rs. 40</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 40</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(40, 'CHARAKH-LADIES-SUIT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="charakhLadiesSuitQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(40, 'CHARAKH-LADIES-SUIT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/clothes.png" alt="">
                             <p>Pant Shirt</p>
                         </div>
-                        <p>Rs. 30</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 30</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(30, 'PANT-SHIRT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="pantShirtQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(30, 'PANT-SHIRT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="priceListItemContainer">
@@ -451,7 +1103,19 @@
                             <img src="../vactor-icons/jersey-wrap-dress.png" alt="">
                             <p>Saree</p>
                         </div>
-                        <p>Rs. 40</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 40</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(40, 'CHARAKH-SAREE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="charakhSareeQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(40, 'CHARAKH-SAREE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 priceListItemsContainer">
@@ -463,21 +1127,57 @@
                             <img src="../vactor-icons/train.png">
                             <p>Toy Small</p>
                         </div>
-                        <p>Rs. 100</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 100</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(100, 'TOY-SMALL')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="toySmallQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(100, 'TOY-SMALL')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/train.png">
                             <p>Toy Medium</p>
                         </div>
-                        <p>Rs. 150</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 150</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(150, 'TOY-MEDIUM')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="toyMediumQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(150, 'TOY-MEDIUM')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/train.png">
                             <p>Toy Large</p>
                         </div>
-                        <p>Rs. 200</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 200</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(200, 'TOY-LARGE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="toyLargeQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(200, 'TOY-LARGE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="priceListItemContainer">
@@ -485,35 +1185,95 @@
                             <img src="../vactor-icons/umbrella.png">
                             <p>Umbrella</p>
                         </div>
-                        <p>Rs. 80</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 80</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(80, 'UMBRELLA')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="umbrellaQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(80, 'UMBRELLA')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/accessory.png">
                             <p>Tie</p>
                         </div>
-                        <p>Rs. 40</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 40</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(40, 'TIE')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="tieQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(40, 'TIE')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/cap.png">
                             <p>Cap</p>
                         </div>
-                        <p>Rs. 40</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 40</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(40, 'CAP')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="capQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(40, 'CAP')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/hat.png">
                             <p>Hat</p>
                         </div>
-                        <p>Rs. 60</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 60</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(60, 'HAT')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="hatQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(60, 'HAT')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="priceListItemContainer">
                         <div class="priceListItemContentRight">
                             <img src="../vactor-icons/backpack.png">
                             <p>Back Pack</p>
                         </div>
-                        <p>Rs. 250-300</p>
+                        <div class="priceListItemContentLeft">
+                            <p>Rs. 250</p>
+                            <div class="btnContainer">
+                                <button type="button" class="btn btn-default btn-sm" onclick="minusbtnClick(250, 'BACK-PACK')">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+
+                                <p id="backPackQuantity">0</p>
+                                <button type="button" class="btn btn-default btn-sm" onclick="plusBtnClick(250, 'BACK-PACK')">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -572,18 +1332,30 @@
             </div>
         </div>
 
-
+        <section id="extimateSection">
+            <div>
+                <img src="" alt="">
+                <span></span>
+            </div>
+            <div>
+                <p>Estimated Price:
+                    <span id="total">0</span>
+                </p>
+            </div>
+        </section>
 
         <!-- ////////////////////////////////MainFooter///////////////////////////////// -->
 
         <div id="mainFooter">
-            Copyright © 2015· DryCleaner Boys Pvt Ltd. All rights reserved
+            Copyright © 2017· DryCleaner Boys Pvt Ltd. All rights reserved
         </div>
 
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="../js/prices.js"></script>
 </body>
 
 </html>

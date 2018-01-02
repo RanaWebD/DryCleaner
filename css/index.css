@@ -15,7 +15,7 @@ p{
   font-family: 'Lato', serif;
 }
 .container hr{
-  border: 1px solid #04A2E1;
+  border: 1px solid #33D65B;
   width: 15%;
 }
 /* ===============Common CSS ===================*/
@@ -134,11 +134,15 @@ p{
   height: 40%;
   background-image: url("https://images.unsplash.com/photo-1451933335233-c41672c8f378?auto=format&fit=crop&w=750&q=80");
 }
-.BImage{
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  text-align: center;
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+      .BImage{
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+         /* on Safari and Chrome  */
 }
 #howItWorksHeadingContainer, #areasHeadingContainer, #reviewHeadingContainer, #whyUsHeadingContainer{
   text-align: center;
@@ -188,6 +192,13 @@ p{
   border-radius: 50%;
   background-size:cover;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fc/India-Gate-3.jpg")
+}
+#reviewContentContainer>div>div{
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px; 
 }
 .whyUsImgContainer{
   display: flex;

@@ -16,6 +16,12 @@
     color: white;
 }
 
+#home:hover, #pricing:hover, #services:hover{
+    border-bottom: 2px solid #33D65B;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: white;
+}
 #container{
     display: flex;
     justify-content: center;
@@ -25,6 +31,9 @@
 #container>div{
     background-color: lightblue;
     padding: 20px;
+}
+#timeSection{display:flex; 
+    justify-content: space-between
 }
 #nameSection{
     display: flex;
