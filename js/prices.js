@@ -1,4 +1,11 @@
 $(document).ready(() => {
+    $(".nav-tabs li").on("click", () => {
+
+        $(this).addClass("active");
+    })
+})
+
+$(document).ready(() => {
     var price = 0;
     //Men Section
     var shirt = 0, trouser = 0, tShirt = 0, kurta = 0, kurtaFancy = 0, coat = 0,

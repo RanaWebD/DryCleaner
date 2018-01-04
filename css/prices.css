@@ -46,20 +46,13 @@ body{
     justify-content: space-around;
     margin-top: 30px;
 }
-.priceListItemContainer:hover{
-    color: green;
-    padding: 3px 5px;
-    background-color: blanchedalmond;
-    transform: scale(1.1);
-    border: 0.5px solid lightgray;
-    border-radius: 5px;
-    box-shadow: 0.5px 0.5px 0.2px lightgray;
-    z-index: 1;
+.priceListItemsContainerBorderRight{
+    border-right: 1px solid lightgray;
+}
+.priceListItemsContainerBorderLeft{
+    border-Left: 1px solid lightgray;
 }
 .priceListItemsContainer{
-    border: 1px solid lightgray;
-    /*border-radius: 5px;
-    box-shadow: 1.5px 1.5px 0.5px lightgray; */
     margin: 10px 0;
     padding: 0 10px 15px 10px;
     text-align: center;
@@ -79,22 +72,28 @@ body{
 }
 .priceListItemContentRight>img{
     margin-right: 8px;
-    width: 50px;
-    height: 50px;
+    width: 140px;
+    height: 140px;
 }
 .priceListItemContentLeft{
+    margin-top: 20px;
     padding-bottom: 5px;
+    flex: 1
+}
+.priceTitle, .quantity{
+    color: lightgray;
 }
 .btnContainer{
     display: flex;
-     justify-content: space-between;
-      width: 70px
+    justify-content: space-around;
+     
 }
 .btnContainer button{
     padding:2px 5px;
 }
 .priceListItemContentRight{
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
 }
 .sectionsHeading{
@@ -110,9 +109,15 @@ body{
 #extimateSection{
     display: flex;
     position:fixed;
-    width:200px;
+    flex: 1;
     padding: 10px 20px;    
-    background:#33D65B;
+    background:#22bb99;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Lato', 'Open-san';
     right:20px;
     bottom:20px;
 }
