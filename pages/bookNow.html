@@ -10,109 +10,290 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bookNow.css">
-    <link href="../Datedropper3/datedropper.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <nav class="navbar navbar-default">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../vactor-icons/logo-final.png" alt="Logo">
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="../index.html" id="home">Home</a>
-                    </li>
-                    <li>
-                        <a href="prices.html" id="pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="services.html" id="services">Services</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">
+                <img src="../vactor-icons/logo-final.png" alt="Logo">
+            </a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="../index.html" id="home">Home</a>
+                </li>
+                <li>
+                    <a href="prices.html" id="pricing">Pricing</a>
+                </li>
+                <li>
+                    <a href="services.html" id="services">Services</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
         <!-- /.container-fluid -->
     </nav>
 
+    <div class="container">
+        <form method="post">
+            <section class="col-sm-8" id="timeSection">
+                <section class="col-sm-12 col-md-6">
+                    <div id="pickupTimeContainer">
+                        <h4>Select a Suitable Pickup Time</h4>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active">
+                                <a href="#pickupTab1" aria-controls="tab1" role="tab" data-toggle="tab">
+                                    <div class="pickupDateContainer">
+                                        <p>Today</p>
+                                        <p class="pickupDate1">date</p>
+                                        <p class="pickupMonth">month</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#pickupTab2" aria-controls="tab2" role="tab" data-toggle="tab">
+                                    <div class="pickupDateContainer">
+                                        <p class="pickupDay2">day</p>
+                                        <p class="pickupDate2">date</p>
+                                        <p class="pickupMonth">month</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#pickupTab3" aria-controls="tab3" role="tab" data-toggle="tab">
+                                    <div class="pickupDateContainer">
+                                        <p class="pickupDay3">day</p>
+                                        <p class="pickupDate3">date</p>
+                                        <p class="pickupMonth">month</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#pickupTab4" aria-controls="tab4" role="tab" data-toggle="tab">
+                                    <div class="pickupDateContainer">
+                                        <p class="pickupDay4">day</p>
+                                        <p class="pickupDate4">date</p>
+                                        <p class="pickupMonth">month</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#pickupTab5" aria-controls="tab5" role="tab" data-toggle="tab">
+                                    <div class="pickupDateContainer">
+                                        <p class="pickupDay5">day</p>
+                                        <p class="pickupDate5">date</p>
+                                        <p class="pickupMonth">month</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
 
-    <div id="container">
-        <div>
-            <h2>Book Now</h2>
-            <section id="nameSection">
-                <div class="form-group">
-                    <label for="firstName" class="sr-only">First Name</label>
-                    <input type="text" id="firstName" placeholder="First Name" class="form-control">
-                </div>
-                <div class="form-group" id="secondNameContainer">
-                    <label for="secondName" class="sr-only">Last Name</label>
-                    <input type="text" id="lastName" placeholder="Last Name" class="form-control">
-                </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <section role="tabpanel" class="tab-pane active" id="pickupTab1">
+                                <div class="timesContainer">
+                                    <div>
+                                        <div class="timeDiv pickupTime 2">
+                                            <p class="">9 AM &#x2192; 11 AM</p>
+                                        </div>
+                                        <div class="timeDiv pickupTime 3">
+                                            <p>11 AM &#x2192; 1 PM</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="timeDiv pickupTime 5">
+                                            <p>2 PM &#x2192; 4 PM</p>
+                                        </div>
+                                        <div class="timeDiv pickupTime 6">
+                                            <p>4 PM &#x2192; 6 PM</p>
+                                        </div>
+                                        <div class="timeDiv pickupTime 7">
+                                            <p>6 PM &#x2192; 8 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section role="tabpanel" class="tab-pane" id="pickupTab2">
+                                <div class="timesContainer">
+                                    <div>
+                                        <div class="timeDiv pickupTime">
+                                            <p class="">9 AM &#x2192; 11 AM</p>
+                                        </div>
+                                        <div class="timeDiv pickupTime">
+                                            <p>11 AM &#x2192; 1 PM</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="timeDiv pickupTime">
+                                            <p>2 PM &#x2192; 4 PM</p>
+                                        </div>
+                                        <div class="timeDiv pickupTime">
+                                            <p>4 PM &#x2192; 6 PM</p>
+                                        </div>
+                                        <div class="timeDiv pickupTime">
+                                            <p>6 PM &#x2192; 8 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <small>Only select one time duration.</small>
+                </section>
+
+                <section class="col-sm-12 col-md-6">
+                    <div id="deliveryTimeContainer">
+                        <h4>Select a Suitable Delivery Time</h4>
+                        <div>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li role="presentation" class="active">
+                                    <a href="#deliveryTab1" aria-controls="tab1" role="tab" data-toggle="tab">
+                                        <div class="deliveryDateContainer">
+                                            <p class="deliveryDay1">day</p>
+                                            <p class="deliveryDate1">date</p>
+                                            <p class="deliveryMonth">month</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#deliveryTab2" aria-controls="tab2" role="tab" data-toggle="tab">
+                                        <div class="deliveryDateContainer">
+                                            <p class="deliveryDay2">day</p>
+                                            <p class="deliveryDate2">date</p>
+                                            <p class="deliveryMonth">month</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#deliveryTab3" aria-controls="tab3" role="tab" data-toggle="tab">
+                                        <div class="deliveryDateContainer">
+                                            <p class="deliveryDay3">day</p>
+                                            <p class="deliveryDate3">date</p>
+                                            <p class="deliveryMonth">month</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#deliveryTab4" aria-controls="tab4" role="tab" data-toggle="tab">
+                                        <div class="deliveryDateContainer">
+                                            <p class="deliveryDay4">day</p>
+                                            <p class="deliveryDate4">date</p>
+                                            <p class="deliveryMonth">month</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#deliveryTab5" aria-controls="tab5" role="tab" data-toggle="tab">
+                                        <div>
+                                            <p class="deliveryDay5">day</p>
+                                            <p class="deliveryDate5">date</p>
+                                            <p class="deliveryMonth">month</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="timesContainer">
+                            <div>
+                                <div class="timeDiv deliveryTime">
+                                    <p>9 AM &#x2192; 11 AM</p>
+                                </div>
+                                <div class="timeDiv deliveryTime">
+                                    <p>11 AM &#x2192; 1 PM</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="timeDiv deliveryTime">
+                                    <p>2 PM &#x2192; 4 PM</p>
+                                </div>
+                                <div class="timeDiv deliveryTime">
+                                    <p>4 PM &#x2192; 6 PM</p>
+                                </div>
+                                <div class="timeDiv deliveryTime">
+                                    <p>6 PM &#x2192; 8 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Only select one time duration.</small>
+                </section>
             </section>
-            <section class="form-group" id="numSection">
-                <label for="number" class="sr-only">Number</label>
-                <input type="text" id="pNum" placeholder="Phone Number" class="form-control">
+
+            <section class="col-sm-4">
+                <section>
+                    <div class="form-group">
+                        <label>
+                            <small>Full Name</small>
+                        </label>
+                        <input type="text" name="full_name" id="fullName" class="form-control" id="exampleInputEmail1" placeholder="full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <small>Contect</small>
+                        </label>
+                        <input type="number" id="pNum" class="form-control" id="exampleInputPassword1" placeholder="mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <small>Address</small>
+                        </label>
+                        <input id="addL1" class="form-control" id="exampleInputPassword1" placeholder="Add Line 1" required>
+                    </div>
+                    <div class="form-group">
+                        <input id="addL2" class="form-control" id="exampleInputPassword1" placeholder="Add Line 2">
+                    </div>
+                    <div class="form-group">
+                        <input id="addL3" class="form-control" id="exampleInputPassword1" placeholder="Add Line 3 with PinCode">
+                    </div>
+                </section>
+
+                <section>
+                    <label>
+                        <small>Services</small>
+                    </label>
+                    <div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="service" value="Laundry"> Laundry
+                            </label>
+                            <label>
+                                <input type="checkbox" name="service" value="Ironing"> Ironing
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="service" value="Dry Cleaning"> Dry cleaning
+                            </label>
+                            <label>
+                                <input type="checkbox" name="service" value="Fold"> Fold
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <button class="btn btn-primary form-control" type="submit">BOOK NOW</button>
             </section>
-            <section class="form-group">
-                <p>Select Services</p>
-                <label class="checkbox-inline">
-                    <input type="checkbox"> Laundry
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox"> Dry Clean
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox"> Ironing
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox"> Starch
-                </label>
-            </section>
-            <section id="timeSection">
-                <div class="form-group">
-                    <p>Pickup Time</p>
-                    <input type="text" class="datePicker" data-jump="4" data-large-mode="true" data-lang="it" />
-                </div>
-                <div class="form-group">
-                    <p>Delivery Time</p>
-                    <input type="text" class="datePicker" data-jump="4" data-large-mode="true" data-lang="it" />
-                </div>
-            </section>
-            <section class="form-group " id="addSection">
-                <label for="add" class="sr-only">Address</label>
-                <input type="text" placeholder="Address Line 1" class="form-control" id="addL1">
-                <input type="text" placeholder="address Line 2" class="form-control" id="addL2">
-                <input type="text" placeholder="address Line 3" class="form-control" id="addL3">
-            </section>
-            <button class="btn btn-primary form-control" onclick="myFunction()">BOOK NOW</button>
-        </div>
+        </form>
     </div>
 
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../Datedropper3/datedropper.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="../js/bookNow.js"></script>
-    <script>
-        $('.datePicker').dateDropper();
-    </script>
 </body>
 
 </html>

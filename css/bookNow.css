@@ -1,3 +1,22 @@
+body, p{
+    margin: 0;
+    padding: 0;
+}
+.nav-tabs {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-tabs>li {
+  float: none;
+}
+.timesContainer{
+  display: flex;
+  padding: 20px 0;
+  background-color: whitesmoke; 
+  justify-content: space-around
+}
 .navbar{
     background-color: #04A2E1;
 }
@@ -8,7 +27,6 @@
     margin-bottom: -20px;
 }
 .navbar-collapse{
-    
     text-align: center;
     border: none;
   }
@@ -21,30 +39,69 @@
     transform: scale(1.1);
     font-weight: bold;
     color: white;
+    margin-right: 5px
 }
-#container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 85vh;
+.container{
+  margin: 70px auto;
 }
-#container>div{
-    background-color: lightblue;
-    padding: 20px;
+#timeSection{
+  text-align: center;
 }
-#timeSection{display:flex; 
-    justify-content: space-between
+h4{
+    background-color: #33D65B;
+    padding:  15px 0;
+    color: white;
+    margin: 0
 }
-#nameSection{
-    display: flex;
-    flex-wrap: wrap;
+#pickupTimeContainer, #deliveryTimeContainer{
+  border: 1px solid lightgray;
+  padding: 0;
 }
-#nameSection p, #numSection p, #addSection p{
-    margin: 10px 0 5px 0;
+#time_sedule_container{
+    margin-top: 20px;
 }
-#addSection{
-    margin-bottom: 20px;
+h4{
+  text-align: center;
 }
-#addSection input{
-    margin-bottom: 6px;
+#timing{
+  margin: 0 20px
+}
+.pickup_time{
+  margin-bottom: 50px
+}
+.dateContainer div{
+  cursor: pointer;
+  display: block;
+}
+.timesContainer{
+  display: flex; 
+  justify-content: space-around
+}
+.timeDiv{
+  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.toggleClass{
+  background-color: #04A2E1;
+  border:none;
+  transform: scale(1.1);
+  font-weight: bold;
+  color: white;
+
+}
+small{
+  color: lightgray;
+}
+.disableElement{
+    background-color: gray;
+    cursor: default;
+}
+.btn{
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 20px 0;
+  line-height: 3px;
 }

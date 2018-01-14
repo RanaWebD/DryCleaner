@@ -1,0 +1,26 @@
+.navbar{
+    background-color: #04A2E1;
+}
+.navbar-header>a>img{
+    height: 180px;
+    width: 180px;
+    margin-top: -60px;
+    margin-bottom: -20px;
+}
+.navbar-collapse{
+    text-align: center;
+    border: none;
+  }
+.navbar-default .navbar-nav>li>a{
+    color: white;
+}
+#home:hover, #pricing:hover, #services:hover{
+    border-bottom: 2px solid #33D65B;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: white;
+    margin-right: 5px
+}
+.detailContent{
+    display: flex;
+}
