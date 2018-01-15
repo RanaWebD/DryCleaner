@@ -50,22 +50,44 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <section style="display:flex; justify-content:center; align-items:center; height: 60vh">
+
+    <h2>Booking Sucessful !</h2>
+    <section id="contentContainer">
         <div>
             <div class="detailContent">
-                <p>Full Name:</p>
-                <p id="name"></p>
+                <p class="contentItemLeft">Full Name</p>
+                <span>:</span>
+                <p class="contentItemRight" id="name"></p>
             </div>
             <div class="detailContent">
-                <p>Contect:</p>
-                <p id="num"></p>
+                <p class="contentItemLeft">Contect</p>
+                <span>:</span>
+                <p class="contentItemRight" id="num"></p>
             </div>
-            <address class="detailContent">
-                <p>Address:</p>
-                <p id="add1"></p>
-                <p id="add2"></p>
-                <p id="add3"></p>
-            </address>
+            <div class="detailContent">
+                <p class="contentItemLeft">Pickup Time</p>
+                <span>:</span>
+                <p class="contentItemRight" id="pickupTime"></p>
+            </div>
+            <div class="detailContent">
+                <p class="contentItemLeft">Delivery Time</p>
+                <span>:</span>
+                <p class="contentItemRight" id="deliveryTime"></p>
+            </div>
+            <div class="detailContent">
+                <p class="contentItemLeft">Services</p>
+                <span>:</span>
+                <p class="contentItemRight" id="selectedServices"></p>
+            </div>
+            <div class="detailContent">
+                <p class="contentItemLeft">Address</p>
+                <span>:</span>
+                <div class="contentItemRight">
+                    <p id="add1"></p>
+                    <p id="add2"></p>
+                    <p id="add3"></p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -73,20 +95,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="../js/orderDetails.js"></script>
-
-
-    <script>
-        var name = localStorage.getItem("name");
-        var num = localStorage.getItem("num");
-        var add1 = localStorage.getItem("add1");
-        var add2 = localStorage.getItem("add2");
-        var add3 = localStorage.getItem("add3");
-        document.querySelector("#name").innerHTML = name;
-        document.querySelector("#num").innerHTML = num;
-        document.querySelector("#add1").innerHTML = add1;
-        document.querySelector("#add2").innerHTML = add2;
-        document.querySelector("#add3").innerHTML = add3;
-    </script>
 </body>
 
 </html>

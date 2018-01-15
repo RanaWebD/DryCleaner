@@ -1,14 +1,13 @@
-var fullName, phoneNum, addL1, addL2, addL3, service = [],
+var fullName, phoneNum, addL1, addL2, addL3, services = [],
     currentDay, currentDate, currentMonth, currentTime, pickupDaysArray = [], datesArray = [], pickupTime = [], deliveryTime = [],
     //pickup section veriables
-    pickupDateArr, pickupDate, pickupDay, pickupMonth,
+    pickupDateArr, pickupDate = "", pickupDay, pickupMonth,
     //delivery section veriables
-    deliveryDaysArray = [],
+    deliveryDaysArray = [], deliveryDate = "",
     smsTemplate
 
 $(document).ready(function () {
     //Pickup Section
-
     currentDate = new Date().getDate()
     currentDay = new Date().getDay();
     currentMonth = new Date().getMonth();
@@ -38,6 +37,7 @@ $(document).ready(function () {
             pickupDaysArray = ["Sat", "Sun", "Mon", "Tue", "Wed"];
             break;
     }
+    //loop a element copy
     //create a date array
     for (var i = 0; i < 5; i++) {
         datesArray.push(currentDate);
@@ -179,14 +179,14 @@ $(document).ready(function () {
 //pickup Date
 $(".pickupDateContainer").click(function () {
     pickupDate = ($(this).children().text()).split("").join("");
+    console.log(pickupDate);
+    nonClickdelivery(pickupDate);
 });
 
 //delivery Date
 $(".deliveryDateContainer").click(function () {
     deliveryDate = ($(this).children().text()).split("").join("");
 });
-
-
 function pickupAndDeliveryTime() {
     //pickup time
     $(".pickupTime").click(function () {
@@ -200,6 +200,14 @@ function pickupAndDeliveryTime() {
     });
 }
 
+//services
+$.each($("input[name='service']:checked"), function () {
+    services.push($(this).val());
+    services.join(", ");
+    console.log(services)
+});
+
+
 $("form").submit(function (event) {
 
     event.preventDefault();
@@ -209,20 +217,22 @@ $("form").submit(function (event) {
     addL1 = $("#addL1").val();
     addL2 = $("#addL2").val();
     addL3 = $("#addL3").val();
-    pickupDate = new Date().toString().split(" ").slice(0, 4);
-    deliveryDate = ($(".deliveryDateContainer").children().text()).slice(0, 8);
 
     //services
     $.each($("input[name='service']:checked"), function () {
-        service.push($(this).val());
+        services.push($(this).val());
+        services.join(", ");
     });
 
     //store values into local storage
     localStorage.setItem("name", fullName);
-    localStorage.setItem("num", phoneNum)
-    localStorage.setItem("add1", addL1)
-    localStorage.setItem("add2", addL2)
-    localStorage.setItem("add3", addL3)
+    localStorage.setItem("num", phoneNum);
+    localStorage.setItem("add1", addL1);
+    localStorage.setItem("add2", addL2);
+    localStorage.setItem("add3", addL3);
+    localStorage.setItem("pickupTime", pickupDate + " " + pickupTime);
+    localStorage.setItem("deliveryTime", deliveryDate + " " + deliveryTime);
+    localStorage.setItem("services", services);
 
     //create a data object we use this object in request body.
     var data = {
@@ -231,7 +241,7 @@ $("form").submit(function (event) {
         "country": "91",
         "sms": [
             {
-                "message": fullName + ", You choose " + service.join(", ") + " services." + " Contect no:" + phoneNum
+                "message": fullName + ", You choose " + services + " services." + " Contect no:" + phoneNum
                     + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + pickupDate + " " + pickupTime +
                     ". Delivery time: " + deliveryDate + " " + deliveryTime + ".",
                 "to": [
@@ -251,5 +261,33 @@ $("form").submit(function (event) {
     });
     document.location.href = "../pages/orderDetails.html"
 })
+
+function nonClickdelivery(pickupDate) {
+    console.log(this);
+    let pDate = pickupDate.split("").slice(3, 5).join("")
+    pDate = (Number(pDate) + 1);
+
+    for (var i = 0; i <= 4; i++) {
+        let some = $('.deliveryDateContainer')[i].children[1].innerHTML;
+        let parent = $('.deliveryDateContainer')[i];
+        console.log(typeof (parent))
+        if (some <= pDate) {
+            parent.parentElement.style.borderColor = "white";
+            parent.hidden = true;
+        } else if (some >= pDate) {
+            parent.parentElement.style.backgroundColor = "";
+            parent.hidden = false;
+        }
+    }
+
+
+
+    const dCA = $('.deliveryDateContainer')
+    console.log(dCA);
+    dCA.forEach(function (element) {
+        console.log(element);
+    });
+    pDate <= ($(".deliveryDate2").text()) ? console.log(true) : console.log(false)
+}
 
 pickupAndDeliveryTime();

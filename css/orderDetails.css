@@ -21,6 +21,30 @@
     color: white;
     margin-right: 5px
 }
+h2{
+    text-align: center;
+    margin: 60px 0 auto;
+}
+#contentContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 60vh;
+}
+#contentContainer>div{
+    min-width: 280px;
+    border: 1px solid lightblue; 
+    border-bottom: none;
+}
 .detailContent{
     display: flex;
+    border-bottom: 1px solid lightblue;
+    padding: 8px;
+}
+.contentItemLeft{
+    flex: 1
+}
+.contentItemRight{
+    flex: 2
 }
