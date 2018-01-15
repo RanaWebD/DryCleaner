@@ -1,10 +1,9 @@
-var fullName, phoneNum, phoneNum, addL1, addL2, addL3, service = [],
-    currentDay, currentDate, currentMonth, currentTime, pickupDaysArray = [], datesArray = [], monthsArray = [], pickupTime = [], deliveryTime, pickupDate, deliveryDate,
+var fullName, phoneNum, addL1, addL2, addL3, service = [],
+    currentDay, currentDate, currentMonth, currentTime, pickupDaysArray = [], datesArray = [], pickupTime = [], deliveryTime = [],
     //pickup section veriables
     pickupDateArr, pickupDate, pickupDay, pickupMonth,
     //delivery section veriables
-    deliveryDateArr, deliveryDaysArray = [],
-    currentIST = [],
+    deliveryDaysArray = [],
     smsTemplate
 
 $(document).ready(function () {
@@ -98,14 +97,13 @@ $(document).ready(function () {
 
     $(".pickupMonth").html(currentMonth);
 
-    //Delivery Section    
-    deliveryDate = new Date()
-    deliveryDate.setDate(new Date().getDate() + 2)
-    deliveryDate = (deliveryDate.toString()).split(" ").slice(0, 4);
-    deliveryDateNum = Number(deliveryDate[2]);
+    var date = new Date()
+    date.setDate(new Date().getDate() + 2)
+    var navDeliveryDateArr = (date.toString()).split(" ").slice(0, 4);
+    var navDeliveryDate = Number(navDeliveryDateArr[2]);
 
     //switch days array according to current day
-    switch (deliveryDate[0]) {
+    switch (navDeliveryDateArr[0]) {
         case "Sun":
             deliveryDaysArray = ["Sun", "Mon", "Tue", "Wed", "Thu"]
             break;
@@ -129,11 +127,11 @@ $(document).ready(function () {
             break;
     }
     //switch days array according to current day
-    $(".deliveryDate1").html(deliveryDateNum);
-    $(".deliveryDate2").html(deliveryDateNum + 1);
-    $(".deliveryDate3").html(deliveryDateNum + 2);
-    $(".deliveryDate4").html(deliveryDateNum + 3);
-    $(".deliveryDate5").html(deliveryDateNum + 4);
+    $(".deliveryDate1").html(navDeliveryDate);
+    $(".deliveryDate2").html(navDeliveryDate + 1);
+    $(".deliveryDate3").html(navDeliveryDate + 2);
+    $(".deliveryDate4").html(navDeliveryDate + 3);
+    $(".deliveryDate5").html(navDeliveryDate + 4);
 
     $(".deliveryDay1").html(deliveryDaysArray[0]);
     $(".deliveryDay2").html(deliveryDaysArray[1]);
@@ -141,7 +139,7 @@ $(document).ready(function () {
     $(".deliveryDay4").html(deliveryDaysArray[3]);
     $(".deliveryDay5").html(deliveryDaysArray[4]);
 
-    $(".deliveryMonth").html(deliveryDate[1]);
+    $(".deliveryMonth").html(navDeliveryDateArr[1]);
 
     //create a date array
     for (var i = 0; i < 5; i++) {
@@ -185,8 +183,9 @@ $(".pickupDateContainer").click(function () {
 
 //delivery Date
 $(".deliveryDateContainer").click(function () {
-    deliveryDateArr = ($(this).children().text()).split("").join("");
+    deliveryDate = ($(this).children().text()).split("").join("");
 });
+
 
 function pickupAndDeliveryTime() {
     //pickup time
@@ -202,56 +201,55 @@ function pickupAndDeliveryTime() {
 }
 
 $("form").submit(function (event) {
+
+    event.preventDefault();
     //fetching values from user input
     fullName = $("#fullName").val();
     phoneNum = $("#pNum").val();
     addL1 = $("#addL1").val();
     addL2 = $("#addL2").val();
     addL3 = $("#addL3").val();
+    pickupDate = new Date().toString().split(" ").slice(0, 4);
+    deliveryDate = ($(".deliveryDateContainer").children().text()).slice(0, 8);
+
     //services
     $.each($("input[name='service']:checked"), function () {
         service.push($(this).val());
     });
 
-    if ((fullName == "" && phoneNum == "") && (addL1 == "")) {
-        return event.preventDefault();
-    } else {
-        event.preventDefault();
-        //store values into local storage
-        localStorage.setItem("name", fullName);
-        localStorage.setItem("num", phoneNum)
-        localStorage.setItem("add1", addL1)
-        localStorage.setItem("add2", addL2)
-        localStorage.setItem("add3", addL3)
+    //store values into local storage
+    localStorage.setItem("name", fullName);
+    localStorage.setItem("num", phoneNum)
+    localStorage.setItem("add1", addL1)
+    localStorage.setItem("add2", addL2)
+    localStorage.setItem("add3", addL3)
 
-        //create a data object we use this object in request body.
-        var data = {
-            "sender": "drycln",
-            "route": "4",
-            "country": "91",
-            "sms": [
-                {
-                    "message": fullName + ", You choose " + service.join(", ") + " services." + " Contect no:" + phoneNum
-                        + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + pickupTime + ". Delivery time: " + deliveryTime + ".",
-                    "to": [
-                        phoneNum,
-                    ]
-                },
-            ]
-        }
-        //converty data object into json file
-        smsTemplate = JSON.stringify(data)
-        console.log(smsTemplate)
-        //sending data to index.php file
-        jQuery.post("../index.php", { myKey: smsTemplate }, function (data) {
-
-        }).fail(function () {
-            alert("Damn, something broke");
-        });
-        document.location.href = "../pages/orderDetails.html"
+    //create a data object we use this object in request body.
+    var data = {
+        "sender": "drycln",
+        "route": "4",
+        "country": "91",
+        "sms": [
+            {
+                "message": fullName + ", You choose " + service.join(", ") + " services." + " Contect no:" + phoneNum
+                    + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + pickupDate + " " + pickupTime +
+                    ". Delivery time: " + deliveryDate + " " + deliveryTime + ".",
+                "to": [
+                    phoneNum,
+                ]
+            },
+        ]
     }
+    //converty data object into json file
+    smsTemplate = JSON.stringify(data)
+    console.log(smsTemplate)
+    //sending data to index.php file
+    jQuery.post("../index.php", { myKey: smsTemplate }, function (data) {
 
+    }).fail(function () {
+        alert("Damn, something broke");
+    });
+    document.location.href = "../pages/orderDetails.html"
 })
 
 pickupAndDeliveryTime();
-deliverySection();
