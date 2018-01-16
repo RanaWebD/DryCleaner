@@ -179,7 +179,6 @@ $(document).ready(function () {
 //pickup Date
 $(".pickupDateContainer").click(function () {
     pickupDate = ($(this).children().text()).split("").join("");
-    console.log(pickupDate);
     nonClickdelivery(pickupDate);
 });
 
@@ -204,7 +203,6 @@ function pickupAndDeliveryTime() {
 $.each($("input[name='service']:checked"), function () {
     services.push($(this).val());
     services.join(", ");
-    console.log(services)
 });
 
 
@@ -252,25 +250,22 @@ $("form").submit(function (event) {
     }
     //converty data object into json file
     smsTemplate = JSON.stringify(data)
-    console.log(smsTemplate)
     //sending data to index.php file
     jQuery.post("../index.php", { myKey: smsTemplate }, function (data) {
-
+        document.location.href = "../pages/orderDetails.html"
     }).fail(function () {
         alert("Damn, something broke");
     });
-    document.location.href = "../pages/orderDetails.html"
+
 })
 
 function nonClickdelivery(pickupDate) {
-    console.log(this);
     let pDate = pickupDate.split("").slice(3, 5).join("")
     pDate = (Number(pDate) + 1);
 
     for (var i = 0; i <= 4; i++) {
         let some = $('.deliveryDateContainer')[i].children[1].innerHTML;
         let parent = $('.deliveryDateContainer')[i];
-        console.log(typeof (parent))
         if (some <= pDate) {
             parent.parentElement.style.borderColor = "white";
             parent.hidden = true;
@@ -279,15 +274,6 @@ function nonClickdelivery(pickupDate) {
             parent.hidden = false;
         }
     }
-
-
-
-    const dCA = $('.deliveryDateContainer')
-    console.log(dCA);
-    dCA.forEach(function (element) {
-        console.log(element);
-    });
-    pDate <= ($(".deliveryDate2").text()) ? console.log(true) : console.log(false)
 }
 
 pickupAndDeliveryTime();
