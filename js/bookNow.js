@@ -253,13 +253,12 @@ $("form").submit(function (event) {
     //converty data object into json file
     smsTemplate = JSON.stringify(data)
     //sending data to index.php file
-
     jQuery.post("http://drycleanerboys:5000/sendSMS", { myKey: smsTemplate }, function (res) {
-        console.log(res);
+        document.location.href = "../pages/orderDetails.html"
     }).fail(function () {
         alert("Damn, something broke");
     });
-    document.location.href = "../pages/orderDetails.html"
+
 })
 
 function nonClickdelivery(pickupDate) {
