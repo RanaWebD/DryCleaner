@@ -2,6 +2,8 @@
 $data = $_POST['myKey'];
 $curl = curl_init();
 
+print($data)
+
 curl_setopt_array($curl, array(
   CURLOPT_URL => "http://api.msg91.com/api/v2/sendsms",
   CURLOPT_RETURNTRANSFER => true,
@@ -14,7 +16,7 @@ curl_setopt_array($curl, array(
   CURLOPT_SSL_VERIFYHOST => 0,
   CURLOPT_SSL_VERIFYPEER => 0,
   CURLOPT_HTTPHEADER => array(
-    "authkey: 192579Aatee7h2Bnf5a56df3d ",
+    "authkey: 192579AUw6yidB95a5dbcd7 ",
     "content-type: application/json"
   ),
 ));

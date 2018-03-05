@@ -17,5 +17,4 @@ $('document').ready(() => {
     document.querySelector("#deliveryTime").innerHTML = deliveryTime;
     document.querySelector("#selectedServices").innerHTML = services;
 
-    console.log(services)
 });
