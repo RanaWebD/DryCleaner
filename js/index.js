@@ -1,6 +1,35 @@
+// Run function when page loads
+var i = 0; 			// Start Point
+var images = [
+    "http://www.lg.com/global/business/images/WM/features/CL_CoinLaundry_Hero_1461557852919.jpg",
+    'http://drycleanerboys.com//slider-imgs/ironing.jpg',
+    'http://drycleanerboys.com//slider-imgs/landscape-1427642388-ironing-steam.jpg'
+];	// Images Array
+var time = 3000;	// Time Between Switch
+
+
+// Change Image
+function changeImg() {
+
+    $('#mainBImage').css("background-image", `url(${images[i]})`);
+
+    // Check If Index Is Under Max
+    if (i < images.length - 1) {
+        // Add 1 to Index
+        i++;
+    } else {
+        // Reset Back To O
+        i = 0;
+    }
+
+    // Run function every x seconds
+    setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg;
+
 
 $(document).ready(function () {
-
     $(function () {
         $(".typed").typed({
             strings: [" \" We pick up, wash and deliver within 48 hours.\"", " \"Free Pickup and Delivery.\""],
