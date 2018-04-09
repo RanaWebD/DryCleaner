@@ -1,9 +1,9 @@
 var fullName, phoneNum, addL1, addL2, addL3, services = [],
     currentDay, currentDate, currentMonth, currentTime, pickupDaysArray = [], datesArray = [], pickupTime = [], deliveryTime = [],
     //pickup section veriables
-    pickupDateArr, pickupDate = "", pickupDay, pickupMonth,
+    pickupDateArr, fullPickupDate = "", pickupDay, pickupMonth,
     //delivery section veriables
-    deliveryDaysArray = [], deliveryDate = "",
+    deliveryDaysArray = [], fullDeliveryDate = "",
     smsTemplate
 
 $(document).ready(function () {
@@ -37,12 +37,13 @@ $(document).ready(function () {
             pickupDaysArray = ["Sat", "Sun", "Mon", "Tue", "Wed"];
             break;
     }
-    //loop a element copy
+    
     //create a date array
     for (var i = 0; i < 5; i++) {
         datesArray.push(currentDate);
         currentDate = currentDate + 1;
     }
+
     //switch days array according to current day
     switch (currentMonth) {
         case 0:
@@ -141,12 +142,6 @@ $(document).ready(function () {
 
     $(".deliveryMonth").html(navDeliveryDateArr[1]);
 
-    //create a date array
-    for (var i = 0; i < 5; i++) {
-        datesArray.push(currentDate);
-        currentDate = currentDate + 1;
-    }
-
     //gone time
     if (currentTime >= 08) {
         $(".2").addClass("disableElement");
@@ -177,37 +172,77 @@ $(document).ready(function () {
 ////////////////////////// Fetched data from element when user click on element///////////////////
 
 //pickup Date
-$(".pickupDateContainer").click(function () {
-    pickupDate = ($(this).children().text()).split("").join("");
+$(".pickupDateLi").click(function () {
+    fullPickupDate = ($(this).children().children().text()).split("").join("");
+    let pickupDate = ($(this).children().children()[1].innerHTML);
+
     nonClickdelivery(pickupDate);
 });
-
 //delivery Date
-$(".deliveryDateContainer").click(function () {
-    deliveryDate = ($(this).children().text()).split("").join("");
+$(".deliveryDateLi").click(function () {
+    fullDeliveryDate = ($(this).children().children().text()).split("").join("");
+
 });
-function pickupAndDeliveryTime() {
-    //pickup time
-    $(".pickupTime").click(function () {
-        $(this).toggleClass("toggleClass");
-        ($(this).hasClass("toggleClass")) ? pickupTime = $(this).children().html() : pickupTime = "";
-    });
-    //delivery Time
-    $(".deliveryTime").click(function () {
-        $(this).toggleClass("toggleClass");
-        ($(this).hasClass("toggleClass")) ? deliveryTime = $(this).children().html() : deliveryTime = "";
-    });
+
+function addClassOnActiveElement(element, switchBtnPickupAndDeliveryTime) {
+    if (switchBtnPickupAndDeliveryTime === 'pickup') {
+        //remove activeTimeElement class from all Time Div Element
+        element.parent().parent().parent().parent().children().children().children().children().removeClass("activeTimeElement");
+        //only add activeTimeElement class on active time div element
+        element.addClass("activeTimeElement");
+        if (element.hasClass("activeTimeElement")) {
+            pickupTime = element.children().html()
+        }
+    } else if (switchBtnPickupAndDeliveryTime === 'delivery') {
+        //remove activeTimeElement class from all Time Div Element
+        element.parent().parent().children().children().removeClass("activeTimeElement")
+        //only add activeTimeElement class on active time div element
+        element.addClass("activeTimeElement");
+        if (element.hasClass("activeTimeElement")) {
+            deliveryTime = element.children().html()
+        }
+    }
 }
 
-//services
-$.each($("input[name='service']:checked"), function () {
-    services.push($(this).val());
-    services.join(", ");
-});
+//toggle in pickup and delivery dates
+function pickupAndDeliveryTime() {
+    //pickup time
+    $("#pickupTimeSection1Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection1Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection1Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection1Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection1Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    
+    $("#pickupTimeSection2Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection2Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection2Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection2Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection2Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    
+    $("#pickupTimeSection3Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection3Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection3Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection3Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection3Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    
+    $("#pickupTimeSection4Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection4Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection4Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection4Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection4Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    
+    $("#pickupTimeSection5Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection5Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection5Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection5Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    $("#pickupTimeSection5Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
+    
+    //delivery Time 
+    $(".deliveryTime").click(function () { addClassOnActiveElement($(this), 'delivery'); });
+}
 
 
 $("form").submit(function (event) {
-
     event.preventDefault();
     //fetching values from user input
     fullName = $("#fullName").val();
@@ -221,6 +256,11 @@ $("form").submit(function (event) {
         services.push($(this).val());
         services.join(", ");
     });
+    
+    let filteredDuplicateServices = [];
+        $.each(services, function(i, el){
+        if($.inArray(el, filteredDuplicateServices) === -1) filteredDuplicateServices.push(el);
+    });
 
     //store values into local storage
     localStorage.setItem("name", fullName);
@@ -228,9 +268,9 @@ $("form").submit(function (event) {
     localStorage.setItem("add1", addL1);
     localStorage.setItem("add2", addL2);
     localStorage.setItem("add3", addL3);
-    localStorage.setItem("pickupTime", pickupDate + " " + pickupTime);
-    localStorage.setItem("deliveryTime", deliveryDate + " " + deliveryTime);
-    localStorage.setItem("services", services);
+    localStorage.setItem("pickupTime", fullPickupDate + " " + pickupTime);
+    localStorage.setItem("deliveryTime", fullDeliveryDate + " " + deliveryTime);
+    localStorage.setItem("services", filteredDuplicateServices);
 
     //create a data object we use this object in request body.
     var data = {
@@ -239,40 +279,43 @@ $("form").submit(function (event) {
         "country": "91",
         "sms": [
             {
-                "message": fullName + ", You choose " + services + " services." + " Contect no:" + phoneNum
-                    + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + pickupDate + " " + pickupTime +
-                    ". Delivery time: " + deliveryDate + " " + deliveryTime + ".",
+                "message": fullName + ", You choose " + filteredDuplicateServices + " services." + " Contect no:" + phoneNum
+                    + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + fullPickupDate + " " + pickupTime +
+                    ". Delivery time: " + fullDeliveryDate + " " + deliveryTime + ".",
                 "to": [
-                    phoneNum,
+                    phoneNum
                 ]
             },
         ]
     }
 
-
     //converty data object into json file
     smsTemplate = JSON.stringify(data)
     //sending data to index.php file
-    jQuery.post("http://drycleanerboys:5000/sendSMS", { myKey: smsTemplate }, function (res) {
+    jQuery.post("http://drycleanerboys.com:5000/sendSMS", { myKey: smsTemplate }, function (res) {
         document.location.href = "../pages/orderDetails.html"
     }).fail(function () {
         alert("Damn, something broke");
     });
-
 })
 
 function nonClickdelivery(pickupDate) {
-    let pDate = pickupDate.split("").slice(3, 5).join("")
-    pDate = (Number(pDate) + 1);
-
-    for (var i = 0; i <= 4; i++) {
-        let some = $('.deliveryDateContainer')[i].children[1].innerHTML;
+    //convert string to Number then add 1 in pickupDate so that We get 1 day dirance between pickup and delivery date
+    let pickup_date = (Number(pickupDate) + 1);
+    let deliveryDateIndex = 1;
+    
+    for (var i = 0; i <= 12; i++) {
+        let delivery_Date = ($('.deliveryDateContainer').parent().children().children()[deliveryDateIndex].innerHTML);
+        //pls 3 in Index so that we will got right index value from delivery date array
+        deliveryDateIndex += 3;
+        
         let parent = $('.deliveryDateContainer')[i];
-        if (some <= pDate) {
+        
+        console.log(delivery_Date + " " + pickup_date)
+        if (delivery_Date <= pickup_date) {
             parent.parentElement.style.borderColor = "white";
             parent.hidden = true;
-        } else if (some >= pDate) {
-            parent.parentElement.style.backgroundColor = "";
+        } else if (delivery_Date >= pickup_date) {
             parent.hidden = false;
         }
     }

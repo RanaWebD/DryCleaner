@@ -83,7 +83,7 @@ h4{
   padding: 8px 15px;
   cursor: pointer;
 }
-.toggleClass{
+.activeTimeElement{
   background-color: #04A2E1;
   border:none;
   transform: scale(1.1);
