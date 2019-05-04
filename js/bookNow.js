@@ -1,193 +1,40 @@
 var fullName, phoneNum, addL1, addL2, addL3, services = [],
-    currentDay, currentDate, currentMonth, currentTime, pickupDaysArray = [], datesArray = [], pickupTime = [], deliveryTime = [],
-    //pickup section veriables
-    pickupDateArr, fullPickupDate = "", pickupDay, pickupMonth,
-    //delivery section veriables
-    deliveryDaysArray = [], fullDeliveryDate = "",
+    currentTime,
+    //pickup Schedule veriables
+    pickupSchedule = "", pickupTime = [],
+    //delivery Schedule veriables
+    deliverySchedule = "", deliveryTime = [],
     smsTemplate
 
 $(document).ready(function () {
-    //Pickup Section
-    currentDate = new Date().getDate()
-    currentDay = new Date().getDay();
-    currentMonth = new Date().getMonth();
-    currentTime = new Date().getHours();
-
-    //switch days array according to current day
-    switch (currentDay) {
-        case 0:
-            pickupDaysArray = ["Sun", "Mon", "Tue", "Wed", "Thu"]
-            break;
-        case 1:
-            pickupDaysArray = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-            break;
-        case 2:
-            pickupDaysArray = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-            break;
-        case 3:
-            pickupDaysArray = ["Wed", "Thu", "Fri", "Sat", "Sun"];
-            break;
-        case 4:
-            pickupDaysArray = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-            break;
-        case 5:
-            pickupDaysArray = ["Fri", "Sat", "Sun", "Mon", "Tue"];
-            break;
-        case 6:
-            pickupDaysArray = ["Sat", "Sun", "Mon", "Tue", "Wed"];
-            break;
-    }
-    
-    //create a date array
-    for (var i = 0; i < 5; i++) {
-        datesArray.push(currentDate);
-        currentDate = currentDate + 1;
-    }
-
-    //switch days array according to current day
-    switch (currentMonth) {
-        case 0:
-            currentMonth = "Jan"
-            break;
-        case 1:
-            currentMonth = "Feb"
-            break;
-        case 2:
-            currentMonth = "Mar"
-            break;
-        case 3:
-            currentMonth = "Apr"
-            break;
-        case 4:
-            currentMonth = "May"
-            break;
-        case 5:
-            currentMonth = "Jun"
-            break;
-        case 6:
-            currentMonth = "Jul"
-            break;
-        case 7:
-            currentMonth = "Aug"
-            break;
-        case 8:
-            currentMonth = "Sep"
-            break;
-        case 9:
-            currentMonth = "Oct"
-            break;
-        case 10:
-            currentMonth = "Nov"
-            break;
-        case 11:
-            currentMonth = "Dec"
-            break;
-    }
-
-    $(".pickupDate1").html(datesArray[0])
-    $(".pickupDate2").html(datesArray[1])
-    $(".pickupDate3").html(datesArray[2])
-    $(".pickupDate4").html(datesArray[3])
-    $(".pickupDate5").html(datesArray[4])
-
-    $(".pickupDay1").html(pickupDaysArray[0])
-    $(".pickupDay2").html(pickupDaysArray[1])
-    $(".pickupDay3").html(pickupDaysArray[2])
-    $(".pickupDay4").html(pickupDaysArray[3])
-    $(".pickupDay5").html(pickupDaysArray[4])
-
-    $(".pickupMonth").html(currentMonth);
-
-    var date = new Date()
-    date.setDate(new Date().getDate() + 2)
-    var navDeliveryDateArr = (date.toString()).split(" ").slice(0, 4);
-    var navDeliveryDate = Number(navDeliveryDateArr[2]);
-
-    //switch days array according to current day
-    switch (navDeliveryDateArr[0]) {
-        case "Sun":
-            deliveryDaysArray = ["Sun", "Mon", "Tue", "Wed", "Thu"]
-            break;
-        case "Mon":
-            deliveryDaysArray = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-            break;
-        case "Tue":
-            deliveryDaysArray = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-            break;
-        case "Wed":
-            deliveryDaysArray = ["Wed", "Thu", "Fri", "Sat", "Sun"];
-            break;
-        case "Thu":
-            deliveryDaysArray = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-            break;
-        case "Fri":
-            deliveryDaysArray = ["Fri", "Sat", "Sun", "Mon", "Tue"];
-            break;
-        case "Sat":
-            deliveryDaysArray = ["Sat", "Sun", "Mon", "Tue", "Wed"];
-            break;
-    }
-    //switch days array according to current day
-    $(".deliveryDate1").html(navDeliveryDate);
-    $(".deliveryDate2").html(navDeliveryDate + 1);
-    $(".deliveryDate3").html(navDeliveryDate + 2);
-    $(".deliveryDate4").html(navDeliveryDate + 3);
-    $(".deliveryDate5").html(navDeliveryDate + 4);
-
-    $(".deliveryDay1").html(deliveryDaysArray[0]);
-    $(".deliveryDay2").html(deliveryDaysArray[1]);
-    $(".deliveryDay3").html(deliveryDaysArray[2]);
-    $(".deliveryDay4").html(deliveryDaysArray[3]);
-    $(".deliveryDay5").html(deliveryDaysArray[4]);
-
-    $(".deliveryMonth").html(navDeliveryDateArr[1]);
-
-    //gone time
-    if (currentTime >= 08) {
-        $(".2").addClass("disableElement");
-        $(".2").attr("disabled", "disabled").off('click');
-    }
-    if (currentTime >= 10) {
-        $(".3").attr("disabled", "disabled").off('click');
-        $(".3").addClass("disableElement");
-    }
-    if (currentTime >= 12) {
-        $(".4").addClass("disableElement");
-        $(".4").attr("disabled", "disabled").off('click');
-    }
-    if (currentTime >= 13) {
-        $(".5").addClass("disableElement");
-        $(".5").attr("disabled", "disabled").off('click');
-    }
-    if (currentTime >= 15) {
-        $(".6").addClass("disableElement");
-        $(".6").attr("disabled", "disabled").off('click');
-    }
-    if (currentTime >= 17) {
-        $(".7").addClass("disableElement");
-        $(".7").attr("disabled", "disabled").off('click');
-    }
+    _pickupTimeContainer();
+    _deliverTimeContainer();
+    _pickupAndDeliveryTime();
 });
 
-////////////////////////// Fetched data from element when user click on element///////////////////
 
-//pickup Date
+// Fetched data from element when user click on element
 $(".pickupDateLi").click(function () {
-    fullPickupDate = ($(this).children().children().text()).split("").join("");
-    let pickupDate = ($(this).children().children()[1].innerHTML);
+    var pickupSelectedDay = $(this).children().children()[0].innerText;
+    var pickupSelectedDate = $(this).children().children()[1].innerText;
+    var pickupSelectedMonth = $(this).children().children()[2].innerText;
 
-    nonClickdelivery(pickupDate);
+    pickupSchedule = `${pickupSelectedDay}/${pickupSelectedDate}/${pickupSelectedMonth}`;
 });
-//delivery Date
 $(".deliveryDateLi").click(function () {
-    fullDeliveryDate = ($(this).children().children().text()).split("").join("");
+    var deliverySelectedDay = $(this).children().children()[0].innerText;
+    var deliverySelectedDate = $(this).children().children()[1].innerText;
+    var deliverySelectedMonth = $(this).children().children()[2].innerText;
 
+    deliverySchedule = `${deliverySelectedDay}/${deliverySelectedDate}/${deliverySelectedMonth}`;
 });
 
-function addClassOnActiveElement(element, switchBtnPickupAndDeliveryTime) {
+function _addClassOnActiveElement(element, switchBtnPickupAndDeliveryTime) {
     if (switchBtnPickupAndDeliveryTime === 'pickup') {
         //remove activeTimeElement class from all Time Div Element
+        /////////////////////////////figuer out below line code//////////////////////////////////////////////////
         element.parent().parent().parent().parent().children().children().children().children().removeClass("activeTimeElement");
+        
         //only add activeTimeElement class on active time div element
         element.addClass("activeTimeElement");
         if (element.hasClass("activeTimeElement")) {
@@ -205,42 +52,146 @@ function addClassOnActiveElement(element, switchBtnPickupAndDeliveryTime) {
 }
 
 //toggle in pickup and delivery dates
-function pickupAndDeliveryTime() {
-    //pickup time
-    $("#pickupTimeSection1Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection1Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection1Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection1Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection1Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    
-    $("#pickupTimeSection2Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection2Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection2Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection2Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection2Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    
-    $("#pickupTimeSection3Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection3Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection3Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection3Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection3Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    
-    $("#pickupTimeSection4Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection4Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection4Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection4Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection4Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    
-    $("#pickupTimeSection5Div1").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection5Div2").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection5Div3").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection5Div4").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    $("#pickupTimeSection5Div5").click(function () { addClassOnActiveElement($(this), 'pickup'); });
-    
+function _pickupAndDeliveryTime() {
+    //pickup time   
+    $(".pickupTimeDiv").click(function () { _addClassOnActiveElement($(this), 'pickup') });
+
     //delivery Time 
-    $(".deliveryTime").click(function () { addClassOnActiveElement($(this), 'delivery'); });
+    $(".deliveryTime").click(function () { _addClassOnActiveElement($(this), 'delivery'); });
+
 }
 
+function _pickupTimeContainer() {
+
+    function _pickupCalendar() {
+        var pickupDate1 = new Date()
+        var pickupDate2 = new Date(new Date().setTime(new Date().getTime() + 1 * 86400000))
+        var pickupDate3 = new Date(new Date().setTime(new Date().getTime() + 2 * 86400000))
+        var pickupDate4 = new Date(new Date().setTime(new Date().getTime() + 3 * 86400000))
+        var pickupDate5 = new Date(new Date().setTime(new Date().getTime() + 4 * 86400000))
+
+
+        $(".pickupDate1").html(pickupDate1.getDate())
+        $(".pickupDate2").html(pickupDate2.getDate())
+        $(".pickupDate3").html(pickupDate3.getDate())
+        $(".pickupDate4").html(pickupDate4.getDate())
+        $(".pickupDate5").html(pickupDate5.getDate())
+
+        $(".pickupDay1").html(pickupDate1.toString().split(' ')[0])
+        $(".pickupDay2").html(pickupDate2.toString().split(' ')[0])
+        $(".pickupDay3").html(pickupDate3.toString().split(' ')[0])
+        $(".pickupDay4").html(pickupDate4.toString().split(' ')[0])
+        $(".pickupDay5").html(pickupDate5.toString().split(' ')[0])
+
+        $(".pickupMonth1").html(pickupDate1.toString().split(' ')[1]);
+        $(".pickupMonth2").html(pickupDate2.toString().split(' ')[1]);
+        $(".pickupMonth3").html(pickupDate3.toString().split(' ')[1]);
+        $(".pickupMonth4").html(pickupDate4.toString().split(' ')[1]);
+        $(".pickupMonth5").html(pickupDate5.toString().split(' ')[1]);
+
+    }
+
+    function _pickupTime() {
+        //Pickup Section
+        currentTime = new Date().getHours();
+
+        //gone time
+        if (currentTime >= 08) {
+            $(".2").addClass("disableElement");
+            $(".2").attr("disabled", "disabled").off('click');
+        }
+        if (currentTime >= 10) {
+            $(".3").attr("disabled", "disabled").off('click');
+            $(".3").addClass("disableElement");
+        }
+        if (currentTime >= 12) {
+            $(".4").addClass("disableElement");
+            $(".4").attr("disabled", "disabled").off('click');
+        }
+        if (currentTime >= 13) {
+            $(".5").addClass("disableElement");
+            $(".5").attr("disabled", "disabled").off('click');
+        }
+        if (currentTime >= 15) {
+            $(".6").addClass("disableElement");
+            $(".6").attr("disabled", "disabled").off('click');
+        }
+        if (currentTime >= 17) {
+            $(".7").addClass("disableElement");
+            $(".7").attr("disabled", "disabled").off('click');
+        }
+    }
+
+
+    _pickupCalendar();
+    _pickupTime();
+}
+
+
+function _deliverTimeContainer() {
+    _hideDeliveryDateLi();
+
+    var date1 = new Date(new Date().setTime(new Date().getTime() + 3 * 86400000))
+    var date2 = new Date(new Date().setTime(new Date().getTime() + 4 * 86400000))
+    var date3 = new Date(new Date().setTime(new Date().getTime() + 5 * 86400000))
+    var date4 = new Date(new Date().setTime(new Date().getTime() + 6 * 86400000))
+    var date5 = new Date(new Date().setTime(new Date().getTime() + 7 * 86400000))
+
+    //switch days array according to current day
+    $(".deliveryDate1").html(date1.getDate());
+    $(".deliveryDate2").html(date2.getDate());
+    $(".deliveryDate3").html(date3.getDate());
+    $(".deliveryDate4").html(date4.getDate());
+    $(".deliveryDate5").html(date5.getDate());
+
+    $(".deliveryDay1").html(date1.toString().split(' ')[0]);
+    $(".deliveryDay2").html(date2.toString().split(' ')[0]);
+    $(".deliveryDay3").html(date3.toString().split(' ')[0]);
+    $(".deliveryDay4").html(date4.toString().split(' ')[0]);
+    $(".deliveryDay5").html(date5.toString().split(' ')[0]);
+
+    $(".deliveryMonth1").html(date1.toString().split(' ')[1]);
+    $(".deliveryMonth2").html(date2.toString().split(' ')[1]);
+    $(".deliveryMonth3").html(date3.toString().split(' ')[1]);
+    $(".deliveryMonth4").html(date4.toString().split(' ')[1]);
+    $(".deliveryMonth5").html(date5.toString().split(' ')[1]);
+
+    function _hideDeliveryDateLi() {
+        document.getElementById("pickupDateLi1").onclick = function () {
+            document.getElementById("deliveryDateLi1").style.display = 'block';
+            document.getElementById("deliveryDateLi2").style.display = 'block';
+            document.getElementById("deliveryDateLi3").style.display = 'block';
+            document.getElementById("deliveryDateLi4").style.display = 'block';
+            document.getElementById("deliveryDateLi5").style.display = 'block';
+        }
+
+        document.getElementById("pickupDateLi2").onclick = function () {
+            document.getElementById("deliveryDateLi1").style.display = 'none';
+            document.getElementById("deliveryDateLi2").style.display = 'block';
+            document.getElementById("deliveryDateLi3").style.display = 'block';
+            document.getElementById("deliveryDateLi4").style.display = 'block';
+        }
+        document.getElementById("pickupDateLi3").onclick = function () {
+            document.getElementById("deliveryDateLi1").style.display = 'none';
+            document.getElementById("deliveryDateLi2").style.display = 'none';
+            document.getElementById("deliveryDateLi3").style.display = 'block';
+            document.getElementById("deliveryDateLi4").style.display = 'block';
+        }
+        document.getElementById("pickupDateLi4").onclick = function () {
+            document.getElementById("deliveryDateLi1").style.display = 'none';
+            document.getElementById("deliveryDateLi2").style.display = 'none';
+            document.getElementById("deliveryDateLi3").style.display = 'none';
+            document.getElementById("deliveryDateLi4").style.display = 'block';
+        }
+        document.getElementById("pickupDateLi5").onclick = function () {
+            document.getElementById("deliveryDateLi1").style.display = 'none';
+            document.getElementById("deliveryDateLi2").style.display = 'none';
+            document.getElementById("deliveryDateLi3").style.display = 'none';
+            document.getElementById("deliveryDateLi4").style.display = 'none';
+        }
+    }
+
+}
 
 $("form").submit(function (event) {
     event.preventDefault();
@@ -256,10 +207,10 @@ $("form").submit(function (event) {
         services.push($(this).val());
         services.join(", ");
     });
-    
+
     let filteredDuplicateServices = [];
-        $.each(services, function(i, el){
-        if($.inArray(el, filteredDuplicateServices) === -1) filteredDuplicateServices.push(el);
+    $.each(services, function (i, el) {
+        if ($.inArray(el, filteredDuplicateServices) === -1) filteredDuplicateServices.push(el);
     });
 
     //store values into local storage
@@ -268,8 +219,8 @@ $("form").submit(function (event) {
     localStorage.setItem("add1", addL1);
     localStorage.setItem("add2", addL2);
     localStorage.setItem("add3", addL3);
-    localStorage.setItem("pickupTime", fullPickupDate + " " + pickupTime);
-    localStorage.setItem("deliveryTime", fullDeliveryDate + " " + deliveryTime);
+    localStorage.setItem("pickupTime", pickupSchedule + " " + pickupTime);
+    localStorage.setItem("deliveryTime", deliverySchedule + " " + deliveryTime);
     localStorage.setItem("services", filteredDuplicateServices);
 
     //create a data object we use this object in request body.
@@ -280,9 +231,10 @@ $("form").submit(function (event) {
         "sms": [
             {
                 "message": fullName + ", You choose " + filteredDuplicateServices + " services." + " Contect no:" + phoneNum
-                    + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + fullPickupDate + " " + pickupTime +
-                    ". Delivery time: " + fullDeliveryDate + " " + deliveryTime + ".",
+                    + ". Address: " + addL1 + ' ' + addL2 + ' ' + addL3 + ". Pickup time: " + pickupSchedule + " " + pickupTime +
+                    ". Delivery time: " + deliverySchedule + " " + deliveryTime + ".",
                 "to": [
+                 
                     phoneNum
                 ]
             },
@@ -290,35 +242,13 @@ $("form").submit(function (event) {
     }
 
     //converty data object into json file
-    smsTemplate = JSON.stringify(data)
+    //smsTemplate = JSON.stringify(data)
     //sending data to index.php file
-    jQuery.post("http://drycleanerboys.com:5000/sendSMS", { myKey: smsTemplate }, function (res) {
+    jQuery.post("http://localhost:5000/sendSMS", data , function (res) {
+        console.log(res)
         document.location.href = "../pages/orderDetails.html"
-    }).fail(function () {
-        alert("Damn, something broke");
+    }).fail(function (err) {
+        console.log(err, "Damn, something broke");
     });
 })
 
-function nonClickdelivery(pickupDate) {
-    //convert string to Number then add 1 in pickupDate so that We get 1 day dirance between pickup and delivery date
-    let pickup_date = (Number(pickupDate) + 1);
-    let deliveryDateIndex = 1;
-    
-    for (var i = 0; i <= 12; i++) {
-        let delivery_Date = ($('.deliveryDateContainer').parent().children().children()[deliveryDateIndex].innerHTML);
-        //pls 3 in Index so that we will got right index value from delivery date array
-        deliveryDateIndex += 3;
-        
-        let parent = $('.deliveryDateContainer')[i];
-        
-        console.log(delivery_Date + " " + pickup_date)
-        if (delivery_Date <= pickup_date) {
-            parent.parentElement.style.borderColor = "white";
-            parent.hidden = true;
-        } else if (delivery_Date >= pickup_date) {
-            parent.hidden = false;
-        }
-    }
-}
-
-pickupAndDeliveryTime();
