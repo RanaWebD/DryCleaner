@@ -10,13 +10,13 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <link rel="stylesheet"  type="text/css" href="./css/style.css" />
 
 </head>
 
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-expanded="false">
@@ -29,8 +29,6 @@
           <img src="vactor-icons/logo-final.png" alt="Logo" />
         </a>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -48,88 +46,79 @@
         </ul>
 
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-
-  <div class="BImage" id="mainBImage">
-    <div id="mainSection">
-      <h2>Washing & Dry Cleaning at your Convenience</h2>
-      <p>
-        <span class="typed"></span>
-      </p>
-      <!-- <p class="sectionsSubHeading">15% Off* on your first order. Use Coupon Code
-        <span>FIRST15</span>
-      </p> -->
-      <a href="./pages/bookNow.html" style="text-decoration: none">
-        <button id="bookNowBtn">Book Now</button>
-      </a>
-      <p id='phoneNum'>Call us on +91-9958996998</p>
-    </div>
-  </div>
-  <!-- //How it works -->
-  <div class="container allSection" id="howItWorks">
-    <div id="howItWorksHeadingContainer">
-      <P class="sectionsHeading">How It Works</P>
-      <p class="sectionsSubHeading">Washing Clothes was never so Convenient</p>
-      <hr>
-    </div>
-    <div class="row" id="howItWorksContentContainer">
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <div class="howItWorksImgContainer">
-          <div class="howItWorksImg" id="playStoreIcon"></div>
-        </div>
-        <p>Download Our Mobile App</p>
-        <p>Place order using our Mobile App or Order through Website/Call.</p>
       </div>
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <div class="howItWorksImgContainer">
-          <div class="howItWorksImg" id="meetUpBoyIcon"></div>
-        </div>
-        <p>Meet our Rider</p>
-        <p>We collect your laundry & dry cleaning from your doorstep.</p>
+    </nav>
+    <header class="BImage" id="mainBImage">
+      <div class="header__text-box" id="mainSection">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main"> Washing & Dry Cleaning at your Convenience</span><br />
+          <span class="typed heading-primary--sub"></span>
+        </h1>
+        <!-- <p class="">15% Off* on your first order. Use Coupon Code
+          <span>FIRST15</span>
+        </p> -->
+        <a href="./pages/bookNow.html" style="text-decoration: none"class="btn btn--blue">Book Now
+        </a>
+        <p class="phone-number">Call us on - <span class="phone-number--no">9958996998</span></p>
       </div>
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <div class="howItWorksImgContainer">
-          <div class="howItWorksImg" id="delBoyIcon"></div>
-        </div>
-        <p>Express Delivery</p>
-        <p>We bring your clothes back fresh within 48 hours.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- +++++++++++++++++Big Image++++++++++++++++++++ -->
-  <div class="BImage" id="BImage1"></div>
-  <!-- ///////////////////////AREAS///////////////////////////////// -->
-  <div class="allSection" id="areas">
-    <div class="container">
-      <div id="areasHeadingContainer">
-        <P class="sectionsHeading">Areas of Service</P>
-        <hr>
-        <p class="sectionsSubHeading">Drycleaner Boys is your local Janakpuri, Uttam Nager, Devarka Dry Cleaning and Laundry Service. We’ve been providing
-          community members with incredible service for quite some time now, and have no plans of stopping anytime soon.
-          Our clients love working with us, many of them returning as repeat customers. Get in touch to let us know what
-          we can do for you today.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- +++++++++++++++++++++++BigImage+++++++++++++++++++++++ -->
-  <div class="BImage" id="BImage2"></div>
-  <!-- //////////////Services//////////////// -->
-  <div class="allSection" id="servingHappiness">
-    <div class="container">
-      <div id="reviewHeadingContainer">
-        <P class="sectionsHeading">Serving Happiness</P>
-        <p class="sectionsSubHeading">Customer Satisfaction Drives Us</p>
-        <hr>
-      </div>
-      <div class="row" id="reviewContentContainer">
+    </header>
+  <main id="howItWorks">
+    <section class="section-how-it-works container" >
+      <h2 class="heading-secondary">
+        <span class="heading-secondary">How It Works</span>
+        <hr class="u-style-hr u-center-hr-element">
+      </h2>
+      <h3>Washing Clothes was never so Convenient</h3>
+      <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <div>
+          <div class="how-it-Works-box howItWorksImgContainer">
+            <div class="works-icon" id="playStoreIcon"></div>
+          </div>
+          <h4 class="heading-tertiary">Download Our Mobile App</h4>
+          <p>Place order using our Mobile App or Order through Website/Call.</p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="how-it-Works-box howItWorksImgContainer">
+            <div class="works-icon" id="meetUpBoyIcon"></div>
+          </div>
+          <h4 class="heading-tertiary">Meet our Rider</h4>
+          <p>We collect your laundry & dry cleaning from your doorstep.</p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="how-it-Works-box howItWorksImgContainer">
+            <div class="works-icon" id="delBoyIcon"></div>
+          </div>
+          <h4 class="heading-tertiary">Express Delivery</h4>
+          <p>We bring your clothes back fresh within 48 hours.</p>
+        </div>
+      </div>
+    </section>
+    <div class="BImage" id="BImage1"></div>
+  
+    <section class="section-areas-of-service">
+      <div class="container areas-of-service">
+          <h2 class="heading-secondary">
+            <span class="heading-secondary">Areas of Service</span>
+            <hr class="u-style-hr u-center-hr-element">
+          </h2>
+          <h4>Drycleaner Boys is your local Janakpuri, Uttam Nager, Devarka Dry Cleaning and Laundry Service. We’ve been providing
+            community members with incredible service for quite some time now, and have no plans of stopping anytime soon.
+            Our clients love working with us, many of them returning as repeat customers. Get in touch to let us know what
+            we can do for you today.
+          </h4>
+      </div>
+    </section>
+
+  <div class="BImage" id="BImage2"></div>
+    <section class="section-review container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary">Serving Happiness</span>
+        <hr class="u-style-hr u-center-hr-element">
+      </h2>
+      <h3>Customer Satisfaction Drives Us</h3>
+      <div class="row reviews-box">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="review-box">
             <img src="./vactor-icons/text-quotes-.png" alt="">
             <p>“I couldn’t be happier about my choice to work with Drycleaner Boys. They provided professional service, great
               pricing, and a guaranteed customer satisfaction. Thank you, Drycleaner Boys for a job well done!”</p>
@@ -137,7 +126,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <div>
+          <div class="review-box">
             <img src="./vactor-icons/text-quotes-.png" alt="">
             <p>“When other companies told me that I needed to spend more in order to get the job finished right, the pros at
               Drycleaner Boys got it done quickly and for a fraction of the cost.”</p>
@@ -145,7 +134,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <div>
+          <div class="review-box">
             <img src="./vactor-icons/text-quotes-.png" alt="">
             <p>“Fast. Efficient. Courteous. Drycleaner Boys delivered on every front with their impeccable service and professional
               results. I know that I’ll be turning to Drycleaner Boys when the next opportunity arises.”</p>
@@ -153,47 +142,44 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+  </section>
 
-
-  <!-- +++++++++++++++++++++++++BigImage+++++++++++++++++++++ -->
   <div class="BImage" id="BImage3"></div>
-  <!-- ////////////////////////////Why Choose Us?///////////////////////////// -->
-  <div class="container">
-    <div id="whyUsHeadingContainer">
-      <P class="sectionsHeading">Why choose Us</P>
-      <p class="sectionsSubHeading">We Make Lives Simpler by Giving You More Free Time</p>
-      <hr>
-    </div>
+
+  <section class="container section-why-choose-us">
+    <h2 class="heading-secondary">
+      <span class="heading-secondary">Why choose Us</span>
+      <hr class="u-style-hr u-center-hr-element">
+    </h2>
+    <h3>We Make Lives Simpler by Giving You More Free Time</h3>
     <div class="row" id="whyUsContentContainer">
       <!-- LEFT -->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
         <div class="col-sm-12 whyUsContentContainer">
-          <div class="col-sm-12 col-md-3 whyUsImgContainer">
+          <div class="col-sm-12 col-md-3 why-choose-us-img-box">
             <div class="whyUsImg" id="qualityImg"></div>
           </div>
           <div class="col-sm-12 col-md-9">
-            <p class="sectionsHeading">Quality</p>
+            <h4 class="heading-tertiary ">Quality</h4>
             <p>We use products that revive your clothes and give a new feel to them.</p>
           </div>
         </div>
         <div class="col-sm-12 whyUsContentContainer">
-          <div class="col-sm-12 col-md-3 whyUsImgContainer">
+          <div class="col-sm-12 col-md-3 why-choose-us-img-box">
             <div class="whyUsImg" id="ecoFrImg"></div>
           </div>
           <div class="col-sm-12 col-md-9">
-            <p class="sectionsHeading">Eco Friendly</p>
+            <h4 class="heading-tertiary ">Eco Friendly</h4>
             <p>Our front loading machines consume 3 times less water than the conventional washing machines</p>
           </div>
         </div>
         <div class="col-sm-12 whyUsContentContainer">
-          <div class="col-sm-12 col-md-3 whyUsImgContainer">
+          <div class="col-sm-12 col-md-3 why-choose-us-img-box">
             <div class="whyUsImg" id="convImg"></div>
           </div>
           <div class="col-sm-12 col-md-9">
-            <p class="sectionsHeading">Convenience</p>
+            <h4 class="heading-tertiary ">Convenience</h4>
             <p>We schedule pickup and drop as per your convenience.</p>
           </div>
         </div>
@@ -201,101 +187,95 @@
       <!-- RIGHT -->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div class="col-sm-12 whyUsContentContainer">
-          <div class="col-sm-12 col-md-3 whyUsImgContainer">
+          <div class="col-sm-12 col-md-3 why-choose-us-img-box">
             <div class="whyUsImg" id="pakImg"></div>
           </div>
           <div class="col-sm-12 col-md-9">
-            <p class="sectionsHeading">Packaging</p>
+            <h4 class="heading-tertiary ">Packaging</h4>
             <p>Your clothes are delivered at your doorstep with the perfect crease.</p>
           </div>
         </div>
         <div class="col-sm-12 whyUsContentContainer">
-          <div class="col-sm-12 col-md-3 whyUsImgContainer">
+          <div class="col-sm-12 col-md-3 why-choose-us-img-box">
             <div class="whyUsImg" id="communityImg"></div>
           </div>
           <div class="col-sm-12 col-md-9">
-            <p class="sectionsHeading">Community</p>
+            <h4 class="heading-tertiary ">Community</h4>
             <p>We collect your donated clothes and spread your love & care to the needy ones.</p>
           </div>
         </div>
         <div class="col-sm-12 whyUsContentContainer">
-          <div class="col-sm-12 col-md-3 whyUsImgContainer">
+          <div class="col-sm-12 col-md-3 why-choose-us-img-box">
             <div class="whyUsImg" id="affordableImg"></div>
           </div>
           <div class="col-sm-12 col-md-9">
-            <p class="sectionsHeading">Affordable</p>
+            <h4 class="heading-tertiary ">Affordable</h4>
             <p>The amount we charge is equivalent to the cost you bear to get the laundry done at your home.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- //////////////////////////////FOTTER////////////////////// -->
+  </section>
+  </main>
   <div class="BImage" id="BImage4"></div>
-  <!-- ///////////////////////ABOUT//////////////////////////////////// -->
-
-  <div class="row" id="subFooter">
-    <div class="container">
-      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-        <p class="sectionsHeading">About</p>
-        <p>Drycleaner Boys has been a reliable New Delhi Dry Cleaning and Laundry Service since 2000. Being a great service
-          provider means having complete and total confidence in the people providing those services, and we’re proud to
-          have the best pros in the business working with us. With a focus on personalized service, competitive rates, and
-          customer satisfaction, we’re always striving to meet and exceed our high standards and our clients’ expectations.
-        </p>
-      </div>
-      <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p class="sectionsHeading">Services</p>
-        <p>Dry Clean</p>
-        <p>Laundry</p>
-        <p>Normal Ironing</p>
-        <p>Steam Ironing</p>
-        <p>Wash & Fold</p>
-        <p>Wash & Iron</p>
-        <p>Starching</p>
-        <p>Free Pick and Drop</p>
-      </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-        <p class="sectionsHeading">Contact</p>
-        <div>
-          <i></i>
-          <p>+91-7027151616</p>
+  <footer>
+    <div class="row" id="subFooter">
+      <div class="container">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+          <h5 class="footer-heading-primary">About</h5>
+          <p>Drycleaner Boys has been a reliable New Delhi Dry Cleaning and Laundry Service since 2000. Being a great service
+            provider means having complete and total confidence in the people providing those services, and we’re proud to
+            have the best pros in the business working with us. With a focus on personalized service, competitive rates, and
+            customer satisfaction, we’re always striving to meet and exceed our high standards and our clients’ expectations.
+          </p>
         </div>
-        <div>
-          <i></i>
-          <p>nitinchhillar86@gmail.com</p>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+          <h5 class="footer-heading-primary">Services</h5>
+          <p>Dry Clean</p>
+          <p>Laundry</p>
+          <p>Normal Ironing</p>
+          <p>Steam Ironing</p>
+          <p>Wash & Fold</p>
+          <p>Wash & Iron</p>
+          <p>Starching</p>
+          <p>Free Pick and Drop</p>
         </div>
-        <div>
-          <i></i>
-          <p>Operating Hours: 8 AM to 10 PM</p>
-        </div>
-        <div>
-          <i></i>
-          <p>Calling Hours: 8 AM to 10 PM</p>
-        </div>
-        <br/>
-        <div>
-          <p class="sectionsHeading">Office</p>
-          <p>E-133,</p>
-          <p>Sahyog Vihar, Matiyala,</p>
-          <p>New Delhi India</p>
-          <p>110059</p>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <h5 class="footer-heading-primary">Contact</h5>
+          <div>
+            <i></i>
+            <p>+91-7027151616</p>
+          </div>
+          <div>
+            <i></i>
+            <p>nitinchhillar86@gmail.com</p>
+          </div>
+          <div>
+            <i></i>
+            <p>Operating Hours: 8 AM to 10 PM</p>
+          </div>
+          <div>
+            <i></i>
+            <p>Calling Hours: 8 AM to 10 PM</p>
+          </div>
+          <br/>
+          <div>
+            <h5 class="footer-heading-primary">Office</h5>
+            <p>E-133,</p>
+            <p>Sahyog Vihar, Matiyala,</p>
+            <p>New Delhi India</p>
+            <p>110059</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- ////////////////////////////////MainFooter///////////////////////////////// -->
-
   <div id="mainFooter">
     Copyright © 2017· DryCleaner Boys Pvt Ltd. All rights reserved
   </div>
-
-
-
   </div>
 
+  </footer>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>

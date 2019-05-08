@@ -1,0 +1,156 @@
+
+#mainSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding-top: 160px;
+  scroll-behavior: smooth;
+  color: white;
+}
+#mainSection>h2{
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Lato', 'Open Sans';
+}
+#phoneNum{
+  font-size: 1.5em 
+}
+
+#bookNowBtn:active{
+  box-shadow: none;
+  top: 4px;  
+}
+
+#mainBImage{
+  height: 100%;
+}
+#BImage1{
+  height: 50%;
+  background-image: url("../imgs/Iron.jpeg");
+}
+#BImage2{
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1477248742637-8e90b0dcfb4b?auto=format&fit=crop&w=750&q=80");
+}
+#BImage3{
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1503327151497-be3b97ef0d42?auto=format&fit=crop&w=750&q=80");
+}
+#BImage4{
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1451933335233-c41672c8f378?auto=format&fit=crop&w=750&q=80");
+}
+.section-how-it-works {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+#playStoreIcon {
+  background-image: url("../vactor-icons/playstore.png");
+}
+#meetUpBoyIcon {
+  background-image: url("../vactor-icons/pickUp-man.png");
+}
+#delBoyIcon {
+  background-image: url("../vactor-icons/delivery-man.png");
+}
+.how-it-Works-box {
+  text-align: center;
+  margin: 5rem 0;}
+  .works-icon {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    box-shadow: 0.2rem 0.2rem 0.05rem lightgray;
+    background-repeat: no-repeat;
+    background-size: 7.2em;
+  }
+
+
+.section-how-it-works,
+.section-areas-of-service,
+.section-review,
+.section-why-choose-us {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.reviews-box {
+  margin-top: 2.5rem;
+}
+.review-box {
+  background-color: whitesmoke;
+  border: 0.1rem solid whitesmoke;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.areasImgContainer,
+.howItWorksImgContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.areasImg {
+  height: 100px;
+  width: 100px;
+  border: 0.5px solid lightgray;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fc/India-Gate-3.jpg");
+}
+.why-choose-us-img-box {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.whyUsContentContainer > div:nth-child(2) > p:nth-child(1) {
+  text-align: center;
+}
+.whyUsContentContainer {
+  margin: 30px 0;
+  text-align: center;
+}
+.whyUsImg {
+  height: 7rem;
+  width: 7rem;
+}
+#ecoFrImg {
+  background-image: url("../vactor-icons/eco-friendly.png");
+  background-repeat: no-repeat;
+}
+#convImg {
+  background-image: url("../vactor-icons/convenience-store.png");
+  background-repeat: no-repeat;
+}
+#qualityImg {
+  background-image: url("../vactor-icons/recommended.png");
+  background-repeat: no-repeat;
+}
+#pakImg {
+  background-image: url("../vactor-icons/shopping-bag.png");
+  background-repeat: no-repeat;
+}
+#communityImg {
+  background-image: url("../vactor-icons/meeting.png");
+  background-repeat: no-repeat;
+}
+#affordableImg {
+  background-image: url("../vactor-icons/rupee.png");
+  background-repeat: no-repeat;
+}
+#subFooter {
+  padding: 10rem 0 5rem 0;
+  color: white;
+  background-color: #04a2e1;
+}
+#mainFooter {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}

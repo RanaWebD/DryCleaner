@@ -1,0 +1,350 @@
+/*
+  0 - 600         Phone
+  600 - 900px:    Tablet portrait
+  1200 - 1800px:  is where our normal styles apply
+  1800px +;       Big desktop
+  
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+  
+  ORDER: Base + typography > general layout + grid > page layout > components
+  
+  1em = 16px
+  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /*hide the primary component so that it will hide when his child component have active animation */
+  margin-bottom: 6rem;
+  display: inline-block; }
+  .heading-primary--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 2.8rem;
+        font-weight: normal; } }
+  .heading-primary--sub {
+    font-size: 2.5rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem; } }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase; }
+
+.footer-heading-primary {
+  font-size: 1.8rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485); }
+
+.phone-number {
+  font-size: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .phone-number {
+      font-size: 1.5rem; } }
+  .phone-number--no {
+    font-size: 3rem;
+    font-weight: 700; }
+    @media only screen and (max-width: 37.5em) {
+      .phone-number--no {
+        font-size: 2rem; } }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5em !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-center-hr-element {
+  margin: 1rem auto !important;
+  text-align: center !important; }
+
+.u-style-hr {
+  border: 1px solid #33D65B;
+  width: 25%; }
+
+.btn {
+  /* :link?? */ }
+  .btn, .btn:visited {
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    display: inline-block;
+    /* new */
+    border-radius: 2rem;
+    transition: all 0.2s;
+    /* new */
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer; }
+  .btn:hover {
+    color: #fff; }
+  .btn--blue {
+    box-shadow: 0 4px #2389da;
+    background-color: #1ca3ec; }
+
+.navbar {
+  margin-bottom: 0 !important;
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+  font-family: 'Lato';
+  font-weight: bold;
+  z-index: 2; }
+
+.navbar-collapse {
+  text-align: center;
+  border: none; }
+
+.nav {
+  background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%); }
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #04A2E1;
+  transform: scale(1.1);
+  font-weight: bold;
+  color: white; }
+
+.navbar-header > a > img {
+  height: 150px;
+  width: 150px;
+  margin-top: -40px;
+  margin-bottom: -20px; }
+
+.header {
+  height: 95vh;
+  background-image: url(../img/Iron.jpeg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: -2rem;
+    left: 5rem; }
+  .header__logo {
+    height: 15rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+#mainSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding-top: 160px;
+  scroll-behavior: smooth;
+  color: white; }
+
+#mainSection > h2 {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Lato', 'Open Sans'; }
+
+#phoneNum {
+  font-size: 1.5em; }
+
+#bookNowBtn:active {
+  box-shadow: none;
+  top: 4px; }
+
+#mainBImage {
+  height: 100%; }
+
+#BImage1 {
+  height: 50%;
+  background-image: url("../imgs/Iron.jpeg"); }
+
+#BImage2 {
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1477248742637-8e90b0dcfb4b?auto=format&fit=crop&w=750&q=80"); }
+
+#BImage3 {
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1503327151497-be3b97ef0d42?auto=format&fit=crop&w=750&q=80"); }
+
+#BImage4 {
+  height: 40%;
+  background-image: url("https://images.unsplash.com/photo-1451933335233-c41672c8f378?auto=format&fit=crop&w=750&q=80"); }
+
+.section-how-it-works {
+  text-align: center;
+  scroll-behavior: smooth; }
+
+#playStoreIcon {
+  background-image: url("../vactor-icons/playstore.png"); }
+
+#meetUpBoyIcon {
+  background-image: url("../vactor-icons/pickUp-man.png"); }
+
+#delBoyIcon {
+  background-image: url("../vactor-icons/delivery-man.png"); }
+
+.how-it-Works-box {
+  text-align: center;
+  margin: 5rem 0; }
+
+.works-icon {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  box-shadow: 0.2rem 0.2rem 0.05rem lightgray;
+  background-repeat: no-repeat;
+  background-size: 7.2em; }
+
+.section-how-it-works,
+.section-areas-of-service,
+.section-review,
+.section-why-choose-us {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
+
+.reviews-box {
+  margin-top: 2.5rem; }
+
+.review-box {
+  background-color: whitesmoke;
+  border: 0.1rem solid whitesmoke;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.5rem; }
+
+.areasImgContainer,
+.howItWorksImgContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; }
+
+.areasImg {
+  height: 100px;
+  width: 100px;
+  border: 0.5px solid lightgray;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fc/India-Gate-3.jpg"); }
+
+.why-choose-us-img-box {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0; }
+
+.whyUsContentContainer > div:nth-child(2) > p:nth-child(1) {
+  text-align: center; }
+
+.whyUsContentContainer {
+  margin: 30px 0;
+  text-align: center; }
+
+.whyUsImg {
+  height: 7rem;
+  width: 7rem; }
+
+#ecoFrImg {
+  background-image: url("../vactor-icons/eco-friendly.png");
+  background-repeat: no-repeat; }
+
+#convImg {
+  background-image: url("../vactor-icons/convenience-store.png");
+  background-repeat: no-repeat; }
+
+#qualityImg {
+  background-image: url("../vactor-icons/recommended.png");
+  background-repeat: no-repeat; }
+
+#pakImg {
+  background-image: url("../vactor-icons/shopping-bag.png");
+  background-repeat: no-repeat; }
+
+#communityImg {
+  background-image: url("../vactor-icons/meeting.png");
+  background-repeat: no-repeat; }
+
+#affordableImg {
+  background-image: url("../vactor-icons/rupee.png");
+  background-repeat: no-repeat; }
+
+#subFooter {
+  padding: 10rem 0 5rem 0;
+  color: white;
+  background-color: #04a2e1; }
+
+#mainFooter {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 0.5rem; }

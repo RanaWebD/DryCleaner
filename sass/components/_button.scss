@@ -1,0 +1,29 @@
+.btn {
+  /* :link?? */
+  &,
+  &:visited{
+    color: $color-white;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    display: inline-block; /* new */
+    border-radius: 2rem;
+    transition: all 0.2s; /* new */
+    position: relative;
+    font-size: $default-font-size;
+  
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &--blue {
+    box-shadow: 0 4px #2389da;
+    background-color: #1ca3ec;
+  }
+}
